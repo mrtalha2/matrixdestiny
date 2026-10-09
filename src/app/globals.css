@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neutrals - Light: Parchment Alabaster */
+    --canvas: 40 33% 97%;             /* #FAF8F5 */
+    --surface: 0 0% 100%;             /* #FFFFFF */
+    --surface-raised: 37 25% 94%;     /* #F4F0EA */
+    --border-subtle: 36 21% 89%;      /* #EAE4DC */
+    --border-strong: 35 18% 79%;      /* #D5CCC0 */
+    --text-primary: 34 9% 10%;        /* #1C1A17 */
+    --text-secondary: 35 9% 30%;      /* #524C44 */
+    --text-muted: 35 7% 49%;          /* #857D73 */
+
+    /* Brand Primary - Warm Terracotta */
+    --brand-primary: 15 52% 50%;      /* #C25E3E */
+    --brand-primary-hover: 14 54% 43%;/* #A84E32 */
+    --brand-primary-active: 14 57% 36%;/* #8F3F27 */
+    --brand-primary-subtle: 18 64% 95%;/* #FAF0EB */
+
+    /* Brand Secondary - Astral Slate */
+    --brand-secondary: 209 35% 27%;   /* #2D465E */
+    --brand-secondary-hover: 209 35% 21%;
+    --brand-secondary-active: 209 37% 16%;
+    --brand-secondary-subtle: 210 29% 95%;
+
+    /* Chart 10-zone Palette */
+    --chart-core: 15 52% 50%;         /* #C25E3E Terracotta */
+    --chart-spirit: 209 35% 27%;      /* #2D465E Astral Slate */
+    --chart-physical: 36 60% 49%;     /* #C78C32 Warm Ochre */
+    --chart-karmic: 6 51% 37%;        /* #8F382E Deep Rust */
+    --chart-talent: 132 18% 37%;      /* #4D6E54 Mineral Sage */
+    --chart-love: 355 35% 55%;        /* #B6636A Dusty Rose */
+    --chart-wealth: 39 56% 42%;       /* #A67C2E Burnished Brass */
+    --chart-paternal: 300 12% 38%;    /* #6C556C Smoky Heather */
+    --chart-maternal: 183 26% 33%;    /* #3E696B Celadon Teal */
+    --chart-cycle: 33 11% 49%;        /* #8B7E6F Stone Dune */
+
+    /* Status Tones */
+    --status-success: 142 30% 35%;
+    --status-warning: 37 68% 42%;
+    --status-error: 0 49% 47%;
+    --status-info: 208 48% 37%;
+
+    /* Ambient Warm Shadows */
+    --shadow-subtle: 0 1px 2px rgba(28, 26, 23, 0.04);
+    --shadow-low: 0 2px 6px -1px rgba(28, 26, 23, 0.06), 0 1px 3px rgba(28, 26, 23, 0.04);
+    --shadow-mid: 0 8px 20px -3px rgba(28, 26, 23, 0.08), 0 3px 8px -1px rgba(28, 26, 23, 0.04);
+    --shadow-high: 0 16px 36px -4px rgba(28, 26, 23, 0.12), 0 6px 16px -2px rgba(28, 26, 23, 0.06);
+  }
+
+  .dark {
+    /* Neutrals - Dark: Obsidian Velveteen */
+    --canvas: 210 14% 5%;             /* #0C0E10 */
+    --surface: 214 15% 9%;            /* #13161A */
+    --surface-raised: 216 16% 12%;    /* #1A1E24 */
+    --border-subtle: 218 15% 16%;     /* #232830 */
+    --border-strong: 218 15% 25%;     /* #363D49 */
+    --text-primary: 214 27% 96%;      /* #F0F3F7 */
+    --text-secondary: 216 16% 71%;    /* #A8B2C1 */
+    --text-muted: 216 11% 54%;        /* #7E8896 */
+
+    /* Brand Primary - Warm Terracotta (Lightened for dark contrast) */
+    --brand-primary: 14 71% 60%;      /* #E07353 */
+    --brand-primary-hover: 14 74% 67%;/* #E8886C */
+    --brand-primary-active: 15 52% 50%;
+    --brand-primary-subtle: 15 38% 12%;
+
+    /* Brand Secondary - Astral Slate (Lightened for dark contrast) */
+    --brand-secondary: 211 35% 52%;   /* #5B83AD */
+    --brand-secondary-hover: 211 40% 60%;
+    --brand-secondary-active: 211 33% 44%;
+    --brand-secondary-subtle: 213 36% 12%;
+
+    /* Chart 10-zone Palette (Dark Mode calibrated) */
+    --chart-core: 14 71% 60%;         /* #E07353 */
+    --chart-spirit: 211 35% 52%;      /* #5B83AD */
+    --chart-physical: 37 75% 58%;     /* #E2A546 */
+    --chart-karmic: 6 48% 49%;        /* #B84E42 */
+    --chart-talent: 133 18% 51%;      /* #6E9677 */
+    --chart-love: 354 51% 66%;        /* #D47E86 */
+    --chart-wealth: 40 58% 54%;       /* #CFA043 */
+    --chart-paternal: 300 11% 51%;    /* #8E758E */
+    --chart-maternal: 182 23% 46%;    /* #5B8F91 */
+    --chart-cycle: 33 15% 60%;        /* #A89A89 */
+
+    /* Status Tones (Dark) */
+    --status-success: 141 31% 50%;
+    --status-warning: 37 68% 57%;
+    --status-error: 0 61% 61%;
+    --status-info: 209 46% 54%;
+
+    /* Dark Shadows with higher opacity */
+    --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-low: 0 2px 8px -1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-mid: 0 8px 24px -3px rgba(0, 0, 0, 0.6), 0 3px 8px -1px rgba(0, 0, 0, 0.4);
+    --shadow-high: 0 18px 40px -4px rgba(0, 0, 0, 0.7), 0 6px 16px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  body {
+    background-color: hsl(var(--canvas));
+    color: hsl(var(--text-primary));
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Tabular numbers for clean numerology alignment */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cross-browser scrollbar hiding utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Subtle sacred aura slow rotation on GPU compositor */
+@keyframes sacred-drift {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -2%, 0) rotate(180deg) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-sacred-drift {
+  animation: sacred-drift 120s linear infinite;
+  will-change: transform;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 8s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 2400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-line {
+  animation: draw-line 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pause animations when tab is inactive or user prefers reduced motion */
+.is-paused,
+.is-paused * {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .site-container {
+    @apply w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  .site-container-fluid {
+    @apply w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] mx-auto;
+  }
+}
