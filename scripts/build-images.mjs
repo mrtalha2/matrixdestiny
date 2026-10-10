@@ -219,6 +219,41 @@ const articles = [
     motif: "reflective-pool",
     title: "Still geometric reflection pool beneath a celestial sacred geometry canopy",
   },
+  {
+    slug: "what-does-arcana-7-mean-destiny-matrix",
+    accent: "#3B82F6",
+    secondary: "#F59E0B",
+    motif: "chariot-momentum",
+    title: "Sovereign chariot vectors and directional arrow radiating forward momentum",
+  },
+  {
+    slug: "how-destiny-matrix-is-calculated",
+    accent: "#10B981",
+    secondary: "#6366F1",
+    motif: "modulo-calculation-grid",
+    title: "Mathematical calculation octagram with numerological reduction vertices",
+  },
+  {
+    slug: "karmic-tail-destiny-matrix-meaning",
+    accent: "#EC4899",
+    secondary: "#8B5CF6",
+    motif: "karmic-triad-root",
+    title: "Descending vertical karmic tail triad anchored to ancestral transformation root",
+  },
+  {
+    slug: "destiny-matrix-compatibility-chart-guide",
+    accent: "#F43F5E",
+    secondary: "#A855F7",
+    motif: "dual-synergy-octagrams",
+    title: "Harmonic composite octagrams uniting relational comfort zone and shared purpose",
+  },
+  {
+    slug: "money-channel-destiny-matrix-guide",
+    accent: "#E07353",
+    secondary: "#F59E0B",
+    motif: "golden-wealth-channel",
+    title: "Diagonal wealth line connecting financial entrance to central soul sanctuary",
+  },
 ];
 
 function generateSvg({ accent, secondary, motif }) {
