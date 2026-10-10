@@ -7,12 +7,14 @@ import { BlogPost } from "@/content/blog/articles";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Locale, getLocalizedPath, LOCALES } from "@/lib/i18n/config";
 
 interface BlogIndexClientProps {
   articles: BlogPost[];
+  locale?: Locale;
 }
 
-export function BlogIndexClient({ articles }: BlogIndexClientProps) {
+export function BlogIndexClient({ articles, locale = "en" }: BlogIndexClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -101,7 +103,7 @@ export function BlogIndexClient({ articles }: BlogIndexClientProps) {
           {filteredArticles.map((article) => (
             <Link
               key={article.slug}
-              href={`/blog/${article.slug}`}
+              href={getLocalizedPath(`/blog/${article.slug}`, locale)}
               className="group block focus:outline-none"
             >
               <Card
@@ -130,14 +132,14 @@ export function BlogIndexClient({ articles }: BlogIndexClientProps) {
 
                 <div className="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs">
                   <span className="text-ink-muted font-sans">
-                    {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                    {new Date(article.publishedAt).toLocaleDateString(LOCALES[locale]?.htmlLang || "en-US", {
                       month: "short",
                       day: "numeric",
                       year: "numeric",
                     })}
                   </span>
                   <span className="flex items-center gap-1 font-medium text-brand-primary group-hover:translate-x-0.5 transition-transform">
-                    Read Article <ArrowRight className="w-3.5 h-3.5" />
+                    {locale === "es" ? "Leer Artículo" : locale === "pt-BR" ? "Ler Artigo" : locale === "de" ? "Artikel lesen" : locale === "id" ? "Baca Artikel" : locale === "ar" ? "قراءة المقال" : "Read Article"} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </Card>

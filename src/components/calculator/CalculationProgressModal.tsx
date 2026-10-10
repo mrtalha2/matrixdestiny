@@ -3,10 +3,14 @@
 import React, { useState, useEffect } from "react";
 import { Sparkles } from "lucide-react";
 
+import { Locale } from "@/lib/i18n/config";
+import { getMessages } from "@/lib/i18n/messages";
+
 interface CalculationProgressModalProps {
   isOpen: boolean;
   birthDateDisplay?: string;
   name?: string;
+  locale?: Locale;
   onComplete: () => void;
 }
 
@@ -22,9 +26,19 @@ export function CalculationProgressModal({
   isOpen,
   birthDateDisplay,
   name,
+  locale = "en",
   onComplete,
 }: CalculationProgressModalProps) {
   const [progress, setProgress] = useState(0);
+  const msgs = getMessages(locale);
+
+  const localizedStages = [
+    { threshold: 22, text: msgs.calculator.modalStep1 || STAGES[0].text },
+    { threshold: 48, text: msgs.calculator.modalStep2 || STAGES[1].text },
+    { threshold: 74, text: msgs.calculator.modalStep3 || STAGES[2].text },
+    { threshold: 92, text: msgs.calculator.modalStep4 || STAGES[3].text },
+    { threshold: 100, text: STAGES[4].text },
+  ];
 
   useEffect(() => {
     if (!isOpen) {
@@ -64,7 +78,7 @@ export function CalculationProgressModal({
   if (!isOpen) return null;
 
   const currentStage =
-    STAGES.find((s) => progress <= s.threshold)?.text || STAGES[STAGES.length - 1].text;
+    localizedStages.find((s) => progress <= s.threshold)?.text || localizedStages[localizedStages.length - 1].text;
 
   return (
     <div

@@ -81,6 +81,8 @@ export const metadata: Metadata = {
 };
 
 import { getSiteSettings } from "@/lib/settings/site-settings";
+import { headers } from "next/headers";
+import { Locale, LOCALES } from "@/lib/i18n/config";
 
 export default async function RootLayout({
   children,
@@ -88,6 +90,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const settings = await getSiteSettings();
+  const headersList = headers();
+  const currentLocaleCode = (headersList.get("x-locale") || "en") as Locale;
+  const currentConfig = LOCALES[currentLocaleCode] || LOCALES.en;
+  const htmlLang = currentConfig.htmlLang;
+  const dir = currentConfig.dir;
 
   const validSocialLinks = (settings.schema.socialLinks || [])
     .map((s) => s.url?.trim())
@@ -126,7 +133,7 @@ export default async function RootLayout({
         publisher: {
           "@id": `${SITE_URL}#organization`,
         },
-        inLanguage: "en-US",
+        inLanguage: htmlLang,
       },
     ],
   };
@@ -150,7 +157,7 @@ export default async function RootLayout({
   const serverHeadTags = extractServerHeadTags(legacyCustomCode);
 
   return (
-    <html lang="en" className={`${cormorant.variable} ${plusJakarta.variable}`}>
+    <html lang={htmlLang} dir={dir} className={`${cormorant.variable} ${plusJakarta.variable}`}>
       <head>
         <JsonLd schema={siteGraph} />
         {/* Search Engine Verification Tags (Rank Math Style) */}

@@ -20,7 +20,26 @@ model AdminUser {
 model SiteSetting {
   key       String   @id
   value     String
+  locale    String   @default("en")
   updatedAt DateTime @updatedAt
+}
+
+model SeoOverride {
+  id            String   @id @default(uuid())
+  path          String
+  locale        String   @default("en")
+  title         String?
+  description   String?
+  canonical     String?
+  ogTitle       String?
+  ogDescription String?
+  ogImage       String?
+  noIndex       Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([path, locale])
+  @@index([locale])
 }
 
 model AuditLog {

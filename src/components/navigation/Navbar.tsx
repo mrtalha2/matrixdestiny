@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Compass, Moon, Sun, ArrowRight, Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeaderConfig, DEFAULT_NAVIGATION_CONFIG } from "@/lib/navigation/navigation-config";
+import { LanguageSelector } from "./LanguageSelector";
 
 export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
   const [config, setConfig] = useState<HeaderConfig>(initialConfig || DEFAULT_NAVIGATION_CONFIG.header);
@@ -93,6 +94,9 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2.5">
+          {/* Language Selector */}
+          <LanguageSelector variant="header" />
+
           {/* Dark Mode Switcher */}
           {config.showThemeToggle !== false && (
             <button
@@ -145,7 +149,11 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
           </div>
 
           {config.ctaButton?.enabled && (
-            <div className="pt-2 border-t border-border-subtle">
+            <div className="pt-2 border-t border-border-subtle flex flex-col gap-2">
+              <div className="flex items-center justify-between py-1">
+                <span className="text-xs text-ink-muted">Language:</span>
+                <LanguageSelector variant="header" />
+              </div>
               <Link href={config.ctaButton.href} onClick={() => setIsMobileMenuOpen(false)} className="block w-full">
                 <Button variant="primary" size="sm" className="w-full justify-center">
                   {config.ctaButton.label}

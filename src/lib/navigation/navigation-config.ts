@@ -6,6 +6,7 @@ export interface HeaderNavLink {
   href: string;
   highlight?: boolean;
   visible: boolean;
+  locale?: string;
 }
 
 export interface HeaderConfig {
@@ -35,6 +36,7 @@ export interface FooterLink {
   href: string;
   visible: boolean;
   highlight?: boolean;
+  locale?: string;
 }
 
 export interface FooterColumn {

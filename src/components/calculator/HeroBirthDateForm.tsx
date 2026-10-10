@@ -6,13 +6,17 @@ import { ArrowRight, Sparkles, User, AlertCircle, ShieldCheck } from "lucide-rea
 import { birthDateSchema, formatBirthDateSlug } from "@/lib/validations/birthdate";
 import { Button } from "@/components/ui/Button";
 import { CalculationProgressModal } from "@/components/calculator/CalculationProgressModal";
+import { Locale, getLocalizedPath } from "@/lib/i18n/config";
+import { getMessages } from "@/lib/i18n/messages";
 
 interface HeroBirthDateFormProps {
   className?: string;
+  locale?: Locale;
 }
 
-export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
+export function HeroBirthDateForm({ className = "", locale = "en" }: HeroBirthDateFormProps) {
   const router = useRouter();
+  const msgs = getMessages(locale);
 
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
@@ -104,7 +108,7 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
     });
 
     if (!result.success) {
-      const firstError = result.error.issues[0]?.message || "Please enter a valid birth date";
+      const firstError = msgs.calculator.invalidDate || result.error.issues[0]?.message || "Please enter a valid birth date";
       setError(firstError);
       return;
     }
@@ -117,7 +121,7 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
     const query = params.toString() ? `?${params.toString()}` : "";
 
     // Show 0-100% calculation animation before navigating
-    setTargetUrl(`/chart/${slug}${query}`);
+    setTargetUrl(getLocalizedPath(`/chart/${slug}${query}`, locale));
     setIsCalculating(true);
   };
 
@@ -125,7 +129,7 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
     setDay("24");
     setMonth("08");
     setYear("1995");
-    setName("Alex");
+    setName(locale === "es" ? "Alejandro" : locale === "pt-BR" ? "Thiago" : locale === "de" ? "Lukas" : locale === "id" ? "Budi" : locale === "ar" ? "علي" : "Alex");
     setGender("female");
     setError(null);
   };
@@ -134,9 +138,9 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
 
   const handleTabClick = (tab: "personal" | "compatibility" | "child") => {
     if (tab === "compatibility") {
-      router.push("/compatibility");
+      router.push(getLocalizedPath("/compatibility", locale));
     } else if (tab === "child") {
-      router.push("/child-matrix");
+      router.push(getLocalizedPath("/child-matrix", locale));
     } else {
       setActiveTab("personal");
     }
@@ -160,41 +164,41 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
               : "text-ink-muted hover:text-ink-secondary"
           }`}
         >
-          Personal
+          {locale === "es" ? "Personal" : locale === "pt-BR" ? "Pessoal" : locale === "de" ? "Persönlich" : locale === "id" ? "Pribadi" : locale === "ar" ? "شخصي" : "Personal"}
         </button>
         <button
           type="button"
           onClick={() => handleTabClick("compatibility")}
           className="flex-1 py-2 px-3 text-xs font-semibold rounded-lg transition-all text-center text-ink-muted hover:text-ink-secondary hover:bg-surface/50"
         >
-          Compatibility
+          {msgs.nav.compatibility}
         </button>
         <button
           type="button"
           onClick={() => handleTabClick("child")}
           className="flex-1 py-2 px-3 text-xs font-semibold rounded-lg transition-all text-center text-ink-muted hover:text-ink-secondary hover:bg-surface/50"
         >
-          Child
+          {msgs.nav.childMatrix}
         </button>
       </div>
 
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-base sm:text-lg font-display font-semibold text-ink-primary">
-          Calculate Your Destiny Matrix Chart
+          {locale === "en" ? "Calculate Your Destiny Matrix Chart" : msgs.chart.chartTitle}
         </h2>
         <button
           type="button"
           onClick={handleExamplePreset}
           className="text-xs font-medium text-brand-primary hover:text-brand-primary-hover transition-colors"
         >
-          Try sample
+          {locale === "es" ? "Probar ejemplo" : locale === "pt-BR" ? "Testar exemplo" : locale === "de" ? "Beispiel testen" : locale === "id" ? "Coba contoh" : locale === "ar" ? "تجربة نموذج" : "Try sample"}
         </button>
       </div>
 
       {/* Name Input */}
       <div className="mb-3.5">
         <label htmlFor="input-name" className="block text-[11px] font-mono font-medium text-ink-muted uppercase mb-1">
-          Full name (optional)
+          {msgs.calculator.nameLabel}
         </label>
         <div className="relative">
           <User className="w-3.5 h-3.5 text-ink-muted absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -202,7 +206,7 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
             id="input-name"
             name="name"
             type="text"
-            placeholder="e.g. Alex"
+            placeholder={msgs.calculator.namePlaceholder}
             value={name}
             onChange={(e) => setName(e.target.value)}
             maxLength={40}
@@ -213,7 +217,7 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
 
       {/* Date of Birth Label */}
       <label className="block text-[11px] font-mono font-medium text-ink-muted uppercase mb-1">
-        Date of birth: DD / MM / YYYY
+        {msgs.calculator.birthDateLabel}: DD / MM / {locale === "es" ? "AAAA" : locale === "pt-BR" ? "AAAA" : locale === "de" ? "JJJJ" : "YYYY"}
       </label>
 
       {/* 3-Segmented Date Inputs */}
@@ -291,18 +295,31 @@ export function HeroBirthDateForm({ className = "" }: HeroBirthDateFormProps) {
         className="w-full text-base font-semibold py-3.5 shadow-elevation-low"
         rightIcon={<ArrowRight className="w-4 h-4" />}
       >
-        Calculate My Free Chart
+        {msgs.calculator.calculateButton || "Calculate My Free Chart"}
       </Button>
 
       {/* Privacy Guarantee Note */}
       <div className="mt-3.5 flex items-start sm:items-center justify-center gap-1.5 text-xs text-ink-muted text-center leading-relaxed">
         <ShieldCheck className="w-4 h-4 text-brand-primary shrink-0 mt-0.5 sm:mt-0" />
-        <span>Your name and birth date are used only to generate your chart. Nothing is stored, and no account is required.</span>
+        <span>
+          {locale === "es"
+            ? "Tu nombre y fecha de nacimiento se usan únicamente para generar tu carta. No se almacena información ni se requiere cuenta."
+            : locale === "pt-BR"
+            ? "Seu nome e data de nascimento são usados apenas para gerar seu mapa. Nada é armazenado e nenhuma conta é necessária."
+            : locale === "de"
+            ? "Dein Name und dein Geburtsdatum werden nur zur Erstellung deines Profils verwendet. Es wird nichts gespeichert."
+            : locale === "id"
+            ? "Nama dan tanggal lahir Anda hanya digunakan untuk membuat bagan Anda. Tidak ada data yang disimpan."
+            : locale === "ar"
+            ? "يُستخدم اسمك وتاريخ ميلادك فقط لإنشاء مخططك الشخصي. لا يتم حفظ أي بيانات ولا يلزم تسجيل حساب."
+            : "Your name and birth date are used only to generate your chart. Nothing is stored, and no account is required."}
+        </span>
       </div>
 
       {/* 0-100% Sacred Geometry Calculation Animation Modal */}
       <CalculationProgressModal
         isOpen={isCalculating}
+        locale={locale}
         name={name}
         birthDateDisplay={day && month && year ? `${day.padStart(2, "0")}/${month.padStart(2, "0")}/${year}` : undefined}
         onComplete={() => {

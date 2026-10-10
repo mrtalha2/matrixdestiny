@@ -14,6 +14,8 @@ export const config = {
   ],
 };
 
+import { extractLocaleFromPathname, LOCALES } from "@/lib/i18n/config";
+
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
@@ -45,5 +47,23 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  // 2. Canonical alias normalization: /pt/ -> /pt-br/
+  if (pathname === "/pt" || pathname.startsWith("/pt/")) {
+    const normalizedPath = pathname.replace(/^\/pt(\/|$)/, "/pt-br$1");
+    return NextResponse.redirect(new URL(`${normalizedPath}${search}`, req.url), 301);
+  }
+
+  // 3. Inject locale and direction request headers for SSR layout & HTML attributes
+  const { locale } = extractLocaleFromPathname(pathname);
+  const dir = LOCALES[locale]?.dir || "ltr";
+
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("x-locale", locale);
+  requestHeaders.set("x-dir", dir);
+
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }

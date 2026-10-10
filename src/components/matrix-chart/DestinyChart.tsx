@@ -226,9 +226,10 @@ export function DestinyChart({
           key={animationKey}
           ref={svgRef}
           id="destiny-matrix-octagram-svg"
+          data-matrix-chart="true"
           viewBox="0 0 1000 1000"
           preserveAspectRatio="xMidYMid meet"
-          className="w-full h-full drop-shadow-sm overflow-visible"
+          className="w-full h-full drop-shadow-sm overflow-visible destiny-chart destiny-octagram matrix-octagram-svg"
           role="img"
           aria-label={`Destiny Matrix Octagram Chart for ${matrix.input.day}/${matrix.input.month}/${matrix.input.year}`}
         >

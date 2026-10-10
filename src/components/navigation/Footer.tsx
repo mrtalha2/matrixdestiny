@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Compass, Shield, ExternalLink, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { FooterConfig, DEFAULT_NAVIGATION_CONFIG } from "@/lib/navigation/navigation-config";
+import { LanguageSelector } from "./LanguageSelector";
 
 export function Footer({ initialConfig }: { initialConfig?: FooterConfig }) {
   const [config, setConfig] = useState<FooterConfig>(initialConfig || DEFAULT_NAVIGATION_CONFIG.footer);
@@ -161,8 +162,13 @@ export function Footer({ initialConfig }: { initialConfig?: FooterConfig }) {
           </div>
         </div>
 
+        {/* Language Selection Bar */}
+        <div className="pt-6 border-t border-border-subtle">
+          <LanguageSelector variant="footer" />
+        </div>
+
         {/* Methodological Disclaimer */}
-        <div className="pt-8 border-t border-border-subtle">
+        <div className="pt-6 border-t border-border-subtle">
           <div className="p-4 rounded-2xl bg-surface/50 border border-border-subtle space-y-1.5">
             <div className="flex items-center gap-1.5 text-ink-muted text-[11px] font-mono uppercase tracking-wider font-semibold">
               <Shield className="w-3.5 h-3.5 text-brand-primary" />

@@ -192,3 +192,31 @@
     @apply w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] mx-auto;
   }
 }
+
+/* RTL and Arabic Language Support */
+[dir="rtl"] {
+  font-family: var(--font-sans), system-ui, -apple-system, "Noto Naskh Arabic", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+[dir="rtl"] .font-display {
+  font-family: var(--font-display), "Noto Naskh Arabic", "IBM Plex Sans Arabic", serif;
+}
+
+/* CRITICAL: Ensure Destiny Matrix Chart geometry and SVG coordinates are NEVER mirrored in RTL */
+[dir="rtl"] .destiny-octagram,
+[dir="rtl"] svg.destiny-chart,
+[dir="rtl"] .matrix-octagram-svg,
+[dir="rtl"] [data-matrix-chart="true"] {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+/* Ensure birth date input numerals use standard Western tabular digits across all locales */
+input[type="text"],
+input[type="date"],
+.birthdate-input,
+.numeric-digits {
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+}

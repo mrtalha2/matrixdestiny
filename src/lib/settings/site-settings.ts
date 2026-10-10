@@ -50,6 +50,7 @@ export type RobotsPolicy =
 import type { Metadata } from "next";
 
 export interface PageSeoOverride {
+  locale?: string;
   title?: string;
   description?: string;
   canonical?: string;

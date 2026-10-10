@@ -3,9 +3,21 @@
 import React, { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { Card } from "@/components/ui/Card";
-import { homepageFaqs } from "@/content/faqs";
+import { homepageFaqs, FaqItem } from "@/content/faqs";
 
-export function FaqSection() {
+interface FaqSectionProps {
+  faqs?: FaqItem[];
+  badgeText?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+export function FaqSection({
+  faqs = homepageFaqs,
+  badgeText = "Frequently Asked Questions",
+  title = "Clear Answers to Common Questions",
+  subtitle = "Everything you need to understand the methodology, calculation accuracy, and philosophy.",
+}: FaqSectionProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -19,22 +31,22 @@ export function FaqSection() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-raised border border-border-subtle text-xs font-semibold uppercase tracking-wider text-ink-muted mb-2">
             <HelpCircle className="w-3.5 h-3.5 text-brand-primary" />
-            <span>Frequently Asked Questions</span>
+            <span>{badgeText}</span>
           </div>
           <h2
             id="faq-title"
             className="text-3xl sm:text-4xl font-display font-normal text-ink-primary tracking-tight mb-3"
           >
-            Clear Answers to Common Questions
+            {title}
           </h2>
           <p className="text-sm sm:text-base text-ink-secondary leading-relaxed font-sans">
-            Everything you need to understand the methodology, calculation accuracy, and philosophy.
+            {subtitle}
           </p>
         </div>
 
         {/* Accordion List (one open at a time) */}
         <div className="space-y-3">
-          {homepageFaqs.map((faq, index) => {
+          {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <Card

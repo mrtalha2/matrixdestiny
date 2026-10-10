@@ -53,6 +53,7 @@ describe("Phase 5: SEO, Canonicals & Per-Page Metadata Architecture", () => {
       clearSettingsCache();
       const findUniqueSpy = vi.spyOn(prisma.siteSetting, "findUnique").mockResolvedValue({
         key: "site_settings_v4",
+        locale: "en",
         value: JSON.stringify({
           seo: {
             ...DEFAULT_SITE_SETTINGS.seo,

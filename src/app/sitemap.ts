@@ -115,6 +115,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: currentDate,
     changeFrequency: "weekly" as const,
     priority: 0.85,
+    alternates: {
+      languages: {
+        en: `${SITE_URL}/arcana/${i + 1}`,
+        es: `${SITE_URL}/es/arcana/${i + 1}`,
+        "pt-BR": `${SITE_URL}/pt-br/arcana/${i + 1}`,
+        de: `${SITE_URL}/de/arcana/${i + 1}`,
+        id: `${SITE_URL}/id/arcana/${i + 1}`,
+        ar: `${SITE_URL}/ar/arcana/${i + 1}`,
+      },
+    },
   }));
 
   const publishedTailRoutes: MetadataRoute.Sitemap = Object.values(karmicTailsCatalog).map((t) => ({
@@ -122,6 +132,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: currentDate,
     changeFrequency: "weekly" as const,
     priority: 0.85,
+    alternates: {
+      languages: {
+        en: `${SITE_URL}/karmic-tails/${t.id}`,
+        es: `${SITE_URL}/es/karmic-tails/${t.id}`,
+        "pt-BR": `${SITE_URL}/pt-br/karmic-tails/${t.id}`,
+        de: `${SITE_URL}/de/karmic-tails/${t.id}`,
+        id: `${SITE_URL}/id/karmic-tails/${t.id}`,
+        ar: `${SITE_URL}/ar/karmic-tails/${t.id}`,
+      },
+    },
   }));
 
   const publishedArticleRoutes: MetadataRoute.Sitemap = getAllArticles().map((art) => ({
@@ -129,34 +149,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: art.updatedAt || currentDate,
     changeFrequency: "monthly" as const,
     priority: 0.75,
+    alternates: {
+      languages: {
+        en: `${SITE_URL}/blog/${art.slug}`,
+        es: `${SITE_URL}/es/blog/${art.slug}`,
+        "pt-BR": `${SITE_URL}/pt-br/blog/${art.slug}`,
+        de: `${SITE_URL}/de/blog/${art.slug}`,
+        id: `${SITE_URL}/id/blog/${art.slug}`,
+        ar: `${SITE_URL}/ar/blog/${art.slug}`,
+      },
+    },
   }));
 
-  // 3. Representative high-intent programmatic chart permalinks
-  const sampleDates = [
-    "1995-08-24",
-    "2000-01-01",
-    "1990-07-15",
-    "1988-11-22",
-    "1992-03-03",
-    "2005-05-05",
-    "1999-12-31",
-    "1984-06-18",
-    "1997-09-09",
-    "2002-04-12",
-  ];
+  // Localized editions of static routes
+  const localizedStaticRoutes: MetadataRoute.Sitemap = [];
+  const targetLocales = ["es", "pt-br", "de", "id", "ar"] as const;
 
-  const dynamicChartRoutes: MetadataRoute.Sitemap = sampleDates.map((date) => ({
-    url: `${SITE_URL}/chart/${date}`,
-    lastModified: currentDate,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
+  for (const loc of targetLocales) {
+    for (const r of staticRoutes) {
+      const path = r.url.replace(SITE_URL, "") || "/";
+      const localizedUrl = path === "/" ? `${SITE_URL}/${loc}` : `${SITE_URL}/${loc}${path}`;
+      localizedStaticRoutes.push({
+        url: localizedUrl,
+        lastModified: currentDate,
+        changeFrequency: r.changeFrequency,
+        priority: Number((r.priority! * 0.95).toFixed(2)),
+      });
+    }
+  }
 
   return [
     ...staticRoutes,
+    ...localizedStaticRoutes,
     ...publishedArcanaRoutes,
     ...publishedTailRoutes,
     ...publishedArticleRoutes,
-    ...dynamicChartRoutes,
   ];
 }
