@@ -17,6 +17,7 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ShareButton } from "@/components/share/ShareButton";
+import { ContextualBirthdateBar } from "@/components/calculator/ContextualBirthdateBar";
 import {
   SITE_URL,
   getArticleSchema,
@@ -218,18 +219,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
 
-        {/* Jump to Free Calculator */}
-        <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-surface/80 border border-border-subtle">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-ink-secondary">
-            <Sparkles className="w-4 h-4 text-brand-primary shrink-0" />
-            <span>Calculate your 22 Arcana coordinates for free with our interactive engine.</span>
-          </div>
-          <Link href="/">
-            <Button variant="primary" size="sm" rightIcon={<ArrowRight className="w-3.5 h-3.5" />}>
-              Jump to Free Calculator
-            </Button>
-          </Link>
-        </div>
+        {/* Contextual Interactive Calculator Bar */}
+        <ContextualBirthdateBar className="my-6" />
 
         {/* Author byline + Social Share */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-border-subtle">

@@ -1,16 +1,41 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Compass, Moon, Sun, ArrowRight, Menu, X, Sparkles } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Compass, Moon, Sun, ArrowRight, Menu, X, Sparkles, ChevronDown, BookOpen, Layers, Heart, Coins, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { HeaderConfig, DEFAULT_NAVIGATION_CONFIG } from "@/lib/navigation/navigation-config";
 import { LanguageSelector } from "./LanguageSelector";
+import { extractLocaleFromPathname, getLocalizedPath, Locale } from "@/lib/i18n/config";
+
+const GUIDES_TITLES: Record<Locale, string> = {
+  en: "Guides",
+  es: "Guías",
+  "pt-BR": "Guias",
+  de: "Leitfäden",
+  id: "Panduan",
+  ar: "الأدلة التعليمية",
+};
 
 export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
+  const pathname = usePathname();
+  const { locale: currentLocale } = extractLocaleFromPathname(pathname || "/");
   const [config, setConfig] = useState<HeaderConfig>(initialConfig || DEFAULT_NAVIGATION_CONFIG.header);
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isGuidesOpen, setIsGuidesOpen] = useState(false);
+  const guidesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (guidesRef.current && !guidesRef.current.contains(e.target as Node)) {
+        setIsGuidesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     // Check initial document state
@@ -52,7 +77,7 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
           <span>{config.topBanner.text}</span>
           {config.topBanner.ctaText && config.topBanner.ctaHref && (
             <Link
-              href={config.topBanner.ctaHref}
+              href={getLocalizedPath(config.topBanner.ctaHref, currentLocale)}
               className="font-bold underline text-brand-primary hover:text-brand-secondary transition-colors"
             >
               {config.topBanner.ctaText} &rarr;
@@ -63,7 +88,7 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
 
       <div className="site-container h-16 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href={getLocalizedPath("/", currentLocale)} className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-full bg-brand-primary/10 border border-brand-primary/25 flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
             <Compass className="w-4 h-4 text-brand-primary" />
           </div>
@@ -82,7 +107,7 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
           {visibleLinks.map((link) => (
             <Link
               key={link.id}
-              href={link.href}
+              href={getLocalizedPath(link.href, currentLocale)}
               className={`hover:text-ink-primary transition-colors ${
                 link.highlight ? "font-semibold text-brand-primary" : ""
               }`}
@@ -90,6 +115,82 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
               {link.label}
             </Link>
           ))}
+
+          {/* Guides Dropdown Menu (Inspired by TMOD Learn Menu) */}
+          <div className="relative inline-block text-left" ref={guidesRef}>
+            <button
+              type="button"
+              onClick={() => setIsGuidesOpen(!isGuidesOpen)}
+              className="flex items-center gap-1 hover:text-ink-primary transition-colors focus:outline-none"
+              aria-expanded={isGuidesOpen}
+            >
+              <span>{GUIDES_TITLES[currentLocale] || "Guides"}</span>
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isGuidesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isGuidesOpen && (
+              <div className="absolute left-0 mt-2 w-64 rounded-2xl bg-surface border border-border-subtle shadow-2xl backdrop-blur-xl z-50 p-2 animate-in fade-in zoom-in-95 duration-150 space-y-1">
+                <Link
+                  href={getLocalizedPath("/blog/how-to-read-destiny-matrix-chart-step-by-step", currentLocale)}
+                  onClick={() => setIsGuidesOpen(false)}
+                  className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-surface-raised text-ink-secondary hover:text-ink-primary transition-colors text-xs"
+                >
+                  <BookOpen className="w-4 h-4 text-brand-primary shrink-0" />
+                  <div>
+                    <div className="font-medium text-ink-primary">How to Read Your Chart</div>
+                    <div className="text-[10px] text-ink-muted">Step-by-step interpretation guide</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href={getLocalizedPath("/blog/how-destiny-matrix-is-calculated", currentLocale)}
+                  onClick={() => setIsGuidesOpen(false)}
+                  className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-surface-raised text-ink-secondary hover:text-ink-primary transition-colors text-xs"
+                >
+                  <Layers className="w-4 h-4 text-chart-spirit shrink-0" />
+                  <div>
+                    <div className="font-medium text-ink-primary">Calculation Methodology</div>
+                    <div className="text-[10px] text-ink-muted">Modulo-22 reduction formula</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href={getLocalizedPath("/arcana/1", currentLocale)}
+                  onClick={() => setIsGuidesOpen(false)}
+                  className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-surface-raised text-ink-secondary hover:text-ink-primary transition-colors text-xs"
+                >
+                  <Sparkles className="w-4 h-4 text-chart-wealth shrink-0" />
+                  <div>
+                    <div className="font-medium text-ink-primary">The 22 Major Arcana</div>
+                    <div className="text-[10px] text-ink-muted">Meanings in all 7 chart positions</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href={getLocalizedPath("/blog/karmic-tail-destiny-matrix-meaning", currentLocale)}
+                  onClick={() => setIsGuidesOpen(false)}
+                  className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-surface-raised text-ink-secondary hover:text-ink-primary transition-colors text-xs"
+                >
+                  <ShieldAlert className="w-4 h-4 text-chart-karmic shrink-0" />
+                  <div>
+                    <div className="font-medium text-ink-primary">Karmic Tail Meanings</div>
+                    <div className="text-[10px] text-ink-muted">Past-life debts & transmutation</div>
+                  </div>
+                </Link>
+
+                <div className="pt-1 border-t border-border-subtle/60">
+                  <Link
+                    href={getLocalizedPath("/blog", currentLocale)}
+                    onClick={() => setIsGuidesOpen(false)}
+                    className="flex items-center justify-between p-2 rounded-xl hover:bg-brand-primary/10 text-brand-primary font-medium text-xs transition-colors"
+                  >
+                    <span>View All 35 Guides</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Right Actions */}
@@ -137,7 +238,7 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
             {visibleLinks.map((link) => (
               <Link
                 key={link.id}
-                href={link.href}
+                href={getLocalizedPath(link.href, currentLocale)}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`py-1.5 px-2 rounded-lg hover:bg-surface-raised transition-colors ${
                   link.highlight ? "font-semibold text-brand-primary" : "text-ink-secondary"
@@ -154,7 +255,7 @@ export function Navbar({ initialConfig }: { initialConfig?: HeaderConfig }) {
                 <span className="text-xs text-ink-muted">Language:</span>
                 <LanguageSelector variant="header" />
               </div>
-              <Link href={config.ctaButton.href} onClick={() => setIsMobileMenuOpen(false)} className="block w-full">
+              <Link href={getLocalizedPath(config.ctaButton.href, currentLocale)} onClick={() => setIsMobileMenuOpen(false)} className="block w-full">
                 <Button variant="primary" size="sm" className="w-full justify-center">
                   {config.ctaButton.label}
                 </Button>

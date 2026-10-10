@@ -23,6 +23,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { SITE_NAME, SITE_URL, getBreadcrumbSchema } from "@/lib/seo/structured-data";
 import { AdSenseUnit } from "@/components/ads/AdSenseUnit";
+import { ContextualBirthdateBar } from "@/components/calculator/ContextualBirthdateBar";
 
 interface ArcanaPageProps {
   params: { id: string };
@@ -249,6 +250,9 @@ export default async function ArcanaDetailPage({ params }: ArcanaPageProps) {
         <blockquote className="p-6 rounded-2xl bg-surface-raised border-l-4 border-brand-primary italic text-base sm:text-lg text-ink-primary shadow-sm leading-relaxed">
           &ldquo;{arcana.pullQuote}&rdquo;
         </blockquote>
+
+        {/* Contextual Interactive Calculator Bar */}
+        <ContextualBirthdateBar zoneName={`Arcana ${arcana.number}: ${arcana.name}`} className="my-6" />
 
         {/* Section 1: In Balance vs Out of Balance */}
         <section className="space-y-4">

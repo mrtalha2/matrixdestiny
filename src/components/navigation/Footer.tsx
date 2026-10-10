@@ -135,7 +135,7 @@ export function Footer({ initialConfig }: { initialConfig?: FooterConfig }) {
           </div>
 
           {/* Dynamic Navigation Columns (8 cols) */}
-          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
+          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {config.columns.map((col) => (
               <div key={col.id}>
                 <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-primary mb-3 font-mono">

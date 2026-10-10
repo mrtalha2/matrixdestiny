@@ -23,6 +23,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { SITE_NAME, SITE_URL, getBreadcrumbSchema } from "@/lib/seo/structured-data";
 import { AdSenseUnit } from "@/components/ads/AdSenseUnit";
+import { ContextualBirthdateBar } from "@/components/calculator/ContextualBirthdateBar";
 import { normalizeLocalePrefix, Locale, getLocalizedPath, LOCALES } from "@/lib/i18n/config";
 import { buildLocalizedMetadata } from "@/lib/seo/localized-seo";
 import { getMessages } from "@/lib/i18n/messages";
@@ -258,6 +259,12 @@ export default async function LocalizedArcanaDetailPage({ params }: LocalizedArc
             </div>
           </Card>
         )}
+
+        {/* Contextual Interactive Calculator Bar */}
+        <ContextualBirthdateBar
+          zoneName={`${norm === "es" ? "Arcano" : norm === "pt-BR" ? "Arcano" : norm === "de" ? "Arkanum" : norm === "id" ? "Arkana" : "الأركانا"} ${arcana.number}`}
+          className="my-6"
+        />
 
         {/* Editorial Content: Balanced vs Shadow */}
         <section aria-labelledby="personality-heading" className="space-y-6">
