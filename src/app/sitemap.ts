@@ -1,188 +1,129 @@
 import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo/structured-data";
-import { arcanaMeanings } from "@/content/arcana-meanings";
 import { karmicTailsCatalog } from "@/content/karmic-tails-catalog";
 import { getAllArticles } from "@/content/blog/articles";
 
 export const dynamic = "force-dynamic";
 
+const targetLocales = [
+  { code: "en", path: "" },
+  { code: "es", path: "/es" },
+  { code: "pt-BR", path: "/pt-br" },
+  { code: "de", path: "/de" },
+  { code: "id", path: "/id" },
+  { code: "ar", path: "/ar" },
+] as const;
+
+function buildAlternates(subpath: string): Record<string, string> {
+  const cleanSubpath = subpath === "/" ? "" : subpath;
+  const alternates: Record<string, string> = {
+    "x-default": `${SITE_URL}${cleanSubpath}`,
+  };
+  for (const loc of targetLocales) {
+    alternates[loc.code] = `${SITE_URL}${loc.path}${cleanSubpath}`;
+  }
+  return alternates;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const currentDate = new Date().toISOString();
 
   // 1. Core static application routes
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: SITE_URL,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 1.0,
-    },
-    {
-      url: `${SITE_URL}/compatibility`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/child-matrix`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/yearly-forecast`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/karmic-tail-calculator`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/money-calculator`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/love-calculator`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/talent-calculator`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/tools`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/blog`,
-      lastModified: currentDate,
-      changeFrequency: "daily",
-      priority: 0.85,
-    },
-    {
-      url: `${SITE_URL}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/terms`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/disclaimer`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/about`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/contact`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/editorial-policy`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+  const staticPaths: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
+    { path: "/", priority: 1.0, changeFrequency: "daily" },
+    { path: "/compatibility", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/child-matrix", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/yearly-forecast", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/karmic-tail-calculator", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/money-calculator", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/love-calculator", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/talent-calculator", priority: 0.85, changeFrequency: "weekly" },
+    { path: "/tools", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/blog", priority: 0.85, changeFrequency: "daily" },
+    { path: "/privacy", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/terms", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/disclaimer", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/about", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/editorial-policy", priority: 0.6, changeFrequency: "monthly" },
   ];
 
-  // 2. Canonical content routes from typed static catalogs
-  const publishedArcanaRoutes: MetadataRoute.Sitemap = Array.from({ length: 22 }, (_, i) => ({
-    url: `${SITE_URL}/arcana/${i + 1}`,
-    lastModified: currentDate,
-    changeFrequency: "weekly" as const,
-    priority: 0.85,
-    alternates: {
-      languages: {
-        en: `${SITE_URL}/arcana/${i + 1}`,
-        es: `${SITE_URL}/es/arcana/${i + 1}`,
-        "pt-BR": `${SITE_URL}/pt-br/arcana/${i + 1}`,
-        de: `${SITE_URL}/de/arcana/${i + 1}`,
-        id: `${SITE_URL}/id/arcana/${i + 1}`,
-        ar: `${SITE_URL}/ar/arcana/${i + 1}`,
-      },
-    },
-  }));
+  const staticEntries: MetadataRoute.Sitemap = [];
 
-  const publishedTailRoutes: MetadataRoute.Sitemap = Object.values(karmicTailsCatalog).map((t) => ({
-    url: `${SITE_URL}/karmic-tails/${t.id}`,
-    lastModified: currentDate,
-    changeFrequency: "weekly" as const,
-    priority: 0.85,
-    alternates: {
-      languages: {
-        en: `${SITE_URL}/karmic-tails/${t.id}`,
-        es: `${SITE_URL}/es/karmic-tails/${t.id}`,
-        "pt-BR": `${SITE_URL}/pt-br/karmic-tails/${t.id}`,
-        de: `${SITE_URL}/de/karmic-tails/${t.id}`,
-        id: `${SITE_URL}/id/karmic-tails/${t.id}`,
-        ar: `${SITE_URL}/ar/karmic-tails/${t.id}`,
-      },
-    },
-  }));
+  for (const item of staticPaths) {
+    const alternates = buildAlternates(item.path);
 
-  const publishedArticleRoutes: MetadataRoute.Sitemap = getAllArticles().map((art) => ({
-    url: `${SITE_URL}/blog/${art.slug}`,
-    lastModified: art.updatedAt || currentDate,
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-    alternates: {
-      languages: {
-        en: `${SITE_URL}/blog/${art.slug}`,
-        es: `${SITE_URL}/es/blog/${art.slug}`,
-        "pt-BR": `${SITE_URL}/pt-br/blog/${art.slug}`,
-        de: `${SITE_URL}/de/blog/${art.slug}`,
-        id: `${SITE_URL}/id/blog/${art.slug}`,
-        ar: `${SITE_URL}/ar/blog/${art.slug}`,
-      },
-    },
-  }));
+    // English root
+    staticEntries.push({
+      url: `${SITE_URL}${item.path === "/" ? "" : item.path}`,
+      lastModified: currentDate,
+      changeFrequency: item.changeFrequency,
+      priority: item.priority,
+      alternates: { languages: alternates },
+    });
 
-  // Localized editions of static routes
-  const localizedStaticRoutes: MetadataRoute.Sitemap = [];
-  const targetLocales = ["es", "pt-br", "de", "id", "ar"] as const;
-
-  for (const loc of targetLocales) {
-    for (const r of staticRoutes) {
-      const path = r.url.replace(SITE_URL, "") || "/";
-      const localizedUrl = path === "/" ? `${SITE_URL}/${loc}` : `${SITE_URL}/${loc}${path}`;
-      localizedStaticRoutes.push({
-        url: localizedUrl,
+    // Localized editions
+    for (const loc of targetLocales) {
+      if (loc.code === "en") continue;
+      staticEntries.push({
+        url: `${SITE_URL}${loc.path}${item.path === "/" ? "" : item.path}`,
         lastModified: currentDate,
-        changeFrequency: r.changeFrequency,
-        priority: Number((r.priority! * 0.95).toFixed(2)),
+        changeFrequency: item.changeFrequency,
+        priority: Number((item.priority * 0.95).toFixed(2)),
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // 2. All 22 Arcana routes
+  const arcanaEntries: MetadataRoute.Sitemap = [];
+  for (let i = 1; i <= 22; i++) {
+    const alternates = buildAlternates(`/arcana/${i}`);
+    for (const loc of targetLocales) {
+      arcanaEntries.push({
+        url: `${SITE_URL}${loc.path}/arcana/${i}`,
+        lastModified: currentDate,
+        changeFrequency: "weekly",
+        priority: loc.code === "en" ? 0.85 : 0.8,
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // 3. All 26 Karmic Tail routes
+  const tailEntries: MetadataRoute.Sitemap = [];
+  for (const t of Object.values(karmicTailsCatalog)) {
+    const alternates = buildAlternates(`/karmic-tails/${t.id}`);
+    for (const loc of targetLocales) {
+      tailEntries.push({
+        url: `${SITE_URL}${loc.path}/karmic-tails/${t.id}`,
+        lastModified: currentDate,
+        changeFrequency: "weekly",
+        priority: loc.code === "en" ? 0.85 : 0.8,
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // 4. All 35 Blog Articles
+  const blogEntries: MetadataRoute.Sitemap = [];
+  for (const art of getAllArticles()) {
+    const alternates = buildAlternates(`/blog/${art.slug}`);
+    for (const loc of targetLocales) {
+      blogEntries.push({
+        url: `${SITE_URL}${loc.path}/blog/${art.slug}`,
+        lastModified: art.updatedAt || currentDate,
+        changeFrequency: "monthly",
+        priority: loc.code === "en" ? 0.75 : 0.7,
+        alternates: { languages: alternates },
       });
     }
   }
 
   return [
-    ...staticRoutes,
-    ...localizedStaticRoutes,
-    ...publishedArcanaRoutes,
-    ...publishedTailRoutes,
-    ...publishedArticleRoutes,
+    ...staticEntries,
+    ...arcanaEntries,
+    ...tailEntries,
+    ...blogEntries,
   ];
 }

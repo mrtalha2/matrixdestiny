@@ -21,7 +21,8 @@
     "disclaimerText": "The Matrix of Destiny is a symbolic archetypal reflection framework, not an empirical science, medical diagnosis, or deterministic fortune-telling. Use with personal discernment.",
     "lastUpdated": "Last updated",
     "minutesRead": "{count} min read",
-    "home": "Home"
+    "home": "Home",
+    "notFound": "Page Not Found (404)"
   },
   "nav": {
     "calculators": "Calculators",
@@ -109,5 +110,19 @@
   },
   "legal": {
     "bindingNotice": "Official Notice: This localized translation is provided for informational convenience. The English version of this document is the sole legally binding text."
+  },
+  "cookieBanner": {
+    "title": "Privacy & Cookie Preferences",
+    "description": "We offer our complete Destiny Matrix reports 100% free of charge. To support this service, we and our advertising partners use cookies to deliver non-intrusive ads.",
+    "privacyPolicy": "Privacy Policy",
+    "accept": "Accept All",
+    "decline": "Essential Only"
+  },
+  "email": {
+    "subject": "Your Personal Destiny Matrix Chart",
+    "greeting": "Hello",
+    "intro": "Here is the direct link to your personal Destiny Matrix chart calculated using the classical method.",
+    "viewButton": "View My Chart",
+    "disclaimer": "This analysis is provided solely for educational and personal self-reflection purposes."
   }
 }
