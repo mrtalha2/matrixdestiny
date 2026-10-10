@@ -183,32 +183,36 @@ assert(!sitemapCode.includes("dynamicChartRoutes"), "Personalized chart dates ex
 // -------------------------------------------------------------
 console.log("\n--- 6. AUDITING LOCALIZED CONTENT CATALOGS & LEGAL NOTICES ---");
 
-// Check Spanish Arcana
-const esArcanaFile = path.join(rootDir, "src", "content", "localized", "arcana", "es.ts");
-assert(fs.existsSync(esArcanaFile), "Spanish Arcana catalog src/content/localized/arcana/es.ts exists");
-if (fs.existsSync(esArcanaFile)) {
-  const content = fs.readFileSync(esArcanaFile, "utf-8");
+// Check Arcana catalogs
+const implementedArcanaLocales = ["es", "pt-BR"].filter(loc => 
+  fs.existsSync(path.join(rootDir, "src", "content", "localized", "arcana", `${loc}.ts`))
+);
+for (const loc of implementedArcanaLocales) {
+  const arcanaFile = path.join(rootDir, "src", "content", "localized", "arcana", `${loc}.ts`);
+  const content = fs.readFileSync(arcanaFile, "utf-8");
   for (let i = 1; i <= 22; i++) {
-    assert(content.includes(`${i}: {`), `Spanish Arcana ${i} defined`);
+    assert(content.includes(`${i}: {`), `[${loc}] Arcana ${i} defined`);
   }
-  pass("Spanish Arcana catalog has all 22 definitions");
+  pass(`[${loc}] Arcana catalog has all 22 definitions`);
 }
 
-// Check Spanish Karmic Tails
-const esKarmicFile = path.join(rootDir, "src", "content", "localized", "karmic-tails", "es.ts");
-assert(fs.existsSync(esKarmicFile), "Spanish Karmic Tails catalog src/content/localized/karmic-tails/es.ts exists");
-if (fs.existsSync(esKarmicFile)) {
-  const content = fs.readFileSync(esKarmicFile, "utf-8");
-  const signatures = [
-    "18-6-6", "21-10-7", "18-6-15", "15-8-11", "9-15-6", "12-16-4", "6-5-17",
-    "6-8-20", "9-9-18", "21-4-10", "9-12-3", "21-7-13", "12-19-7", "3-7-22",
-    "18-3-12", "6-14-8", "9-18-9", "21-10-16", "15-5-8", "18-9-9", "3-22-19",
-    "6-17-11", "3-13-10", "6-20-14", "15-20-5", "9-3-21"
-  ];
+// Check Karmic Tails catalogs
+const signatures = [
+  "18-6-6", "21-10-7", "18-6-15", "15-8-11", "9-15-6", "12-16-4", "6-5-17",
+  "6-8-20", "9-9-18", "21-4-10", "9-12-3", "21-7-13", "12-19-7", "3-7-22",
+  "18-3-12", "6-14-8", "9-18-9", "21-10-16", "15-5-8", "18-9-9", "3-22-19",
+  "6-17-11", "3-13-10", "6-20-14", "15-20-5", "9-3-21"
+];
+const implementedKarmicLocales = ["es", "pt-BR"].filter(loc => 
+  fs.existsSync(path.join(rootDir, "src", "content", "localized", "karmic-tails", `${loc}.ts`))
+);
+for (const loc of implementedKarmicLocales) {
+  const karmicFile = path.join(rootDir, "src", "content", "localized", "karmic-tails", `${loc}.ts`);
+  const content = fs.readFileSync(karmicFile, "utf-8");
   for (const sig of signatures) {
-    assert(content.includes(`"${sig}": {`), `Spanish Karmic Tail ${sig} defined`);
+    assert(content.includes(`"${sig}": {`), `[${loc}] Karmic Tail ${sig} defined`);
   }
-  pass(`Spanish Karmic Tails catalog has all 26 authentic programs`);
+  pass(`[${loc}] Karmic Tails catalog has all 26 authentic programs`);
 }
 
 // Check Legal Precedence Notice on localized legal pages

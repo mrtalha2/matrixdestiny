@@ -279,6 +279,241 @@ export function LocalizedHomeGuide({ locale }: LocalizedHomeGuideProps) {
     );
   }
 
+  if (locale === "pt-BR") {
+    return (
+      <div className="space-y-16 sm:space-y-24 py-12 sm:py-16">
+        {/* =========================================================================
+            1. SEÇÃO: A MATRIZ DO DESTINO É UM TESTE DE PERSONALIDADE?
+            ========================================================================= */}
+        <section aria-labelledby="distinction-heading-pt" className="site-container">
+          <div className="relative overflow-hidden rounded-2xl border border-border-strong bg-gradient-to-b from-surface to-surface-raised p-6 sm:p-10 shadow-elevation-subtle">
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-xs font-mono font-medium text-brand-primary mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Distinção Fundamental</span>
+              </div>
+
+              <h2
+                id="distinction-heading-pt"
+                className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+              >
+                A Matriz do Destino é um teste de personalidade?
+              </h2>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-6">
+                <strong>Não.</strong> Um teste de personalidade comum (como MBTI ou Eneagrama) apresenta perguntas sobre como você se percebe em situações cotidianas. O resultado depende diretamente das respostas que você escolhe no momento.
+              </p>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-8">
+                A <strong>Matriz do Destino</strong>, por outro lado, é um mapa geométrico arquetípico deduzido puramente da sua <em>data exata de nascimento</em>. Não há questionários para responder. Ela revela sua estrutura de 22 energias universais em estado de luz (equilíbrio) e sombra (bloqueios a superar).
+              </p>
+
+              {/* Tabela Comparativa */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="rounded-xl border border-border-subtle bg-surface p-5 space-y-3">
+                  <div className="flex items-center gap-2 text-ink-muted text-xs font-mono uppercase tracking-wider">
+                    <X className="w-4 h-4 text-ink-muted" />
+                    <span>Testes Psicológicos Clássicos</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-secondary space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-ink-muted">•</span>
+                      <span>Respostas subjetivas que oscilam conforme o humor do dia.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-ink-muted">•</span>
+                      <span>Descrevem comportamentos presentes sem indicar raízes cármicas.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-ink-muted">•</span>
+                      <span>Enquadram em rótulos fixos sem dinâmicas de evolução.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="rounded-xl border border-brand-primary/30 bg-brand-primary/5 p-5 space-y-3">
+                  <div className="flex items-center gap-2 text-brand-primary text-xs font-mono uppercase tracking-wider font-semibold">
+                    <Check className="w-4 h-4 text-brand-primary" />
+                    <span>Matriz do Destino</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-primary space-y-2 font-medium">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-primary shrink-0 mt-0.5" />
+                      <span>Cálculo matemático inalterável derivado da sua data de nascimento.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-primary shrink-0 mt-0.5" />
+                      <span>Integra lições cármicas, linha do amor, dinheiro e talentos.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-primary shrink-0 mt-0.5" />
+                      <span>Apresenta cada energia em luz (crescimento) e sombra (transmutação).</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            2. SEÇÃO: COMO LER SEU MAPA
+            ========================================================================= */}
+        <section aria-labelledby="how-to-read-heading-pt" className="site-container">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-raised border border-border-subtle text-xs font-semibold uppercase tracking-wider text-ink-muted mb-3">
+              <Compass className="w-3.5 h-3.5 text-brand-primary" />
+              <span>Guia Passo a Passo</span>
+            </div>
+            <h2
+              id="how-to-read-heading-pt"
+              className="text-3xl sm:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+            >
+              Como ler sua Matriz do Destino
+            </h2>
+            <p className="text-sm sm:text-base text-ink-secondary leading-relaxed">
+              O octagrama concentra múltiplos canais energéticos. Comece por estes três pontos essenciais:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <Card elevation="low" className="p-6 sm:p-8 space-y-4 border border-border-subtle bg-surface">
+              <div className="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center font-mono font-bold text-brand-primary text-sm">
+                01
+              </div>
+              <h3 className="font-display text-xl font-medium text-ink-primary">
+                Centro da Alma e Personalidade
+              </h3>
+              <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                Analise o <strong>Ponto E</strong> (zona de conforto no centro do octagrama) e o <strong>Ponto A</strong> (dia de nascimento). Eles revelam como você se recarrega e a energia que você transmite ao mundo exterior.
+              </p>
+              <div className="pt-2 text-xs font-mono text-brand-primary">
+                Ponto E (Alma) + Ponto A (Exterior)
+              </div>
+            </Card>
+
+            <Card elevation="low" className="p-6 sm:p-8 space-y-4 border border-border-subtle bg-surface">
+              <div className="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center font-mono font-bold text-brand-primary text-sm">
+                02
+              </div>
+              <h3 className="font-display text-xl font-medium text-ink-primary">
+                A Cauda Cármica (Base Inferior)
+              </h3>
+              <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                Observe os <strong>Pontos D, D2 e D1</strong> na ponta inferior da matriz. Essa tríade guarda as memórias subconscientes de vidas passadas e os desafios recorrentes que precisam ser transmutados em luz.
+              </p>
+              <div className="pt-2 text-xs font-mono text-brand-primary">
+                Tríade D-D2-D1 (Cauda Cármica)
+              </div>
+            </Card>
+
+            <Card elevation="low" className="p-6 sm:p-8 space-y-4 border border-border-subtle bg-surface">
+              <div className="w-10 h-10 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center font-mono font-bold text-brand-primary text-sm">
+                03
+              </div>
+              <h3 className="font-display text-xl font-medium text-ink-primary">
+                Linhas do Amor e do Dinheiro
+              </h3>
+              <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                Examine o quadrante inferior direito: a <strong>Linha do Amor</strong> descreve o parceiro ideal e padrões de relacionamento, enquanto a <strong>Linha do Dinheiro</strong> orienta carreiras prósperas e finanças.
+              </p>
+              <div className="pt-2 text-xs font-mono text-brand-primary">
+                Canal L (Amor) + Canal M (Dinheiro)
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            3. SEÇÃO: OS 22 ARCANOS
+            ========================================================================= */}
+        <section aria-labelledby="arcana-preview-heading-pt" className="site-container">
+          <div className="rounded-2xl border border-border-subtle bg-surface-raised p-8 sm:p-12 text-center space-y-6">
+            <div className="max-w-2xl mx-auto space-y-3">
+              <h2
+                id="arcana-preview-heading-pt"
+                className="text-2xl sm:text-3xl font-display font-medium text-ink-primary"
+              >
+                Conheça os 22 Arcanos Maiores na Matriz
+              </h2>
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed">
+                Cada número de 1 a 22 representa uma frequência universal de energia humana. Explore nossos guias completos para decodificar cada arquétipo.
+              </p>
+            </div>
+
+            <div className="pt-4 flex flex-wrap justify-center gap-3">
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="secondary" size="sm">
+                  1. O Mago
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/2", locale)}>
+                <Button variant="secondary" size="sm">
+                  2. A Sacerdotisa
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/3", locale)}>
+                <Button variant="secondary" size="sm">
+                  3. A Imperatriz
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/4", locale)}>
+                <Button variant="secondary" size="sm">
+                  4. O Imperador
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/7", locale)}>
+                <Button variant="secondary" size="sm">
+                  7. O Carro
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/10", locale)}>
+                <Button variant="secondary" size="sm">
+                  10. A Roda da Fortuna
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/21", locale)}>
+                <Button variant="secondary" size="sm">
+                  21. O Mundo
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/22", locale)}>
+                <Button variant="secondary" size="sm">
+                  22. O Louco
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            4. SEÇÃO: CHAMADA PARA AÇÃO
+            ========================================================================= */}
+        <section className="site-container">
+          <div className="rounded-2xl border border-brand-primary/40 bg-gradient-to-r from-brand-primary/10 via-surface to-chart-wealth/10 p-8 sm:p-12 text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-medium text-ink-primary">
+              Calcule sua Matriz do Destino Agora
+            </h2>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-ink-secondary">
+              Insira sua data de nascimento em segundos. Sem cadastro obrigatório nem limites de tempo. Descubra seu mapa completo agora mesmo.
+            </p>
+            <Button
+              onClick={scrollToCalculator}
+              variant="primary"
+              size="lg"
+              className="font-semibold shadow-elevation-mid"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Ir para a Calculadora
+            </Button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   // Default fallback
   return null;
 }
