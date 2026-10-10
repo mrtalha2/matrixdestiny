@@ -4,6 +4,7 @@ import { esBlogArticles } from "@/content/localized/blog/es";
 import { ptBrBlogArticles } from "@/content/localized/blog/pt-BR";
 import { deBlogArticles } from "@/content/localized/blog/de";
 import { idBlogArticles } from "@/content/localized/blog/id";
+import { arBlogArticles } from "@/content/localized/blog/ar";
 import { Locale, normalizeLocalePrefix } from "@/lib/i18n/config";
 
 const localizedBlogRegistry: Partial<Record<string, BlogPost[]>> = {
@@ -11,7 +12,7 @@ const localizedBlogRegistry: Partial<Record<string, BlogPost[]>> = {
   "pt-BR": ptBrBlogArticles,
   de: deBlogArticles,
   id: idBlogArticles,
-  // Other locales will be registered as their batches complete
+  ar: arBlogArticles,
 };
 
 export function getLocalizedArticles(locale: string): BlogPost[] {

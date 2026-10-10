@@ -1,6 +1,6 @@
 # Matrix of Destiny — Full Route × Locale Coverage Audit
 
-> Generated: 2026-10-10T09:42:41.174Z
+> Generated: 2026-10-10T09:57:45.197Z
 
 ## Coverage Summary by Locale
 
@@ -11,7 +11,7 @@
 | **pt-BR** | 104 | 104 | 0 | 0 | **100.0%** |
 | **de** | 104 | 104 | 0 | 0 | **100.0%** |
 | **id** | 104 | 104 | 0 | 0 | **100.0%** |
-| **ar** | 104 | 59 | 45 | 0 | **56.7%** |
+| **ar** | 104 | 104 | 0 | 0 | **100.0%** |
 
 ---
 
@@ -21,7 +21,7 @@
 |---|---| --- | --- | --- | --- | --- | --- |
 | Core | `/` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Hub | `/tools` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
-| Hub | `/blog` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
+| Hub | `/blog` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Calculator | `/compatibility` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Calculator | `/child-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Calculator | `/yearly-forecast` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
@@ -78,48 +78,48 @@
 | Karmic Tail | `/karmic-tails/soul-sacrificed` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Karmic Tail | `/karmic-tails/rebel` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Karmic Tail | `/karmic-tails/overseer` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
-| Blog Article | `/blog/what-does-arcana-7-mean-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/how-destiny-matrix-is-calculated` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/karmic-tail-destiny-matrix-meaning` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-compatibility-chart-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/money-channel-destiny-matrix-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/matrix-of-destiny-vs-destiny-matrix-vs-matrix-of-fate` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/why-destiny-matrix-calculators-give-different-numbers` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/how-to-calculate-destiny-matrix-by-hand` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/how-to-read-destiny-matrix-chart-step-by-step` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-center-number-comfort-zone` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/is-the-destiny-matrix-accurate` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/is-destiny-matrix-based-on-astrology` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/where-did-matrix-of-destiny-come-from` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-vs-human-design` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-vs-life-path-number` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/mirrored-destiny-matrix-meaning` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/same-arcana-repeated-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-lines-explained` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/talent-zone-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-yearly-forecast-explained` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/age-periods-life-cycles-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/chakra-table-destiny-matrix-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/ancestral-lines-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/blind-spots-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/common-mistakes-reading-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-love-line-how-to-read` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-compatibility-centers-and-patterns` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/child-destiny-matrix-how-to-read` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/parent-child-balance-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/money-blocks-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/money-and-love-balance-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/life-purpose-destiny-matrix-stages` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/inner-self-vs-outer-self-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-for-career-choices` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Blog Article | `/blog/destiny-matrix-journaling-prompts` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/about` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/contact` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/editorial-policy` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/disclaimer` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/privacy` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Legal | `/terms` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Component | `404 Error Page` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Component | `Cookie Banner` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
-| Component | `Email Template` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ❌ Leak |
+| Blog Article | `/blog/what-does-arcana-7-mean-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/how-destiny-matrix-is-calculated` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/karmic-tail-destiny-matrix-meaning` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-compatibility-chart-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/money-channel-destiny-matrix-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/matrix-of-destiny-vs-destiny-matrix-vs-matrix-of-fate` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/why-destiny-matrix-calculators-give-different-numbers` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/how-to-calculate-destiny-matrix-by-hand` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/how-to-read-destiny-matrix-chart-step-by-step` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-center-number-comfort-zone` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/is-the-destiny-matrix-accurate` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/is-destiny-matrix-based-on-astrology` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/where-did-matrix-of-destiny-come-from` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-vs-human-design` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-vs-life-path-number` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/mirrored-destiny-matrix-meaning` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/same-arcana-repeated-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-lines-explained` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/talent-zone-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-yearly-forecast-explained` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/age-periods-life-cycles-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/chakra-table-destiny-matrix-guide` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/ancestral-lines-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/blind-spots-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/common-mistakes-reading-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-love-line-how-to-read` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-compatibility-centers-and-patterns` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/child-destiny-matrix-how-to-read` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/parent-child-balance-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/money-blocks-in-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/money-and-love-balance-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/life-purpose-destiny-matrix-stages` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/inner-self-vs-outer-self-destiny-matrix` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-for-career-choices` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Blog Article | `/blog/destiny-matrix-journaling-prompts` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/about` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/contact` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/editorial-policy` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/disclaimer` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/privacy` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Legal | `/terms` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Component | `404 Error Page` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Component | `Cookie Banner` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
+| Component | `Email Template` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK |
 | Component | `PDF / Share Export` | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ✅ OK | ⚠️ Note |
