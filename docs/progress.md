@@ -16,8 +16,8 @@
 | **Batch 4** | Phase 1 — Complete Spanish (`es`) Localization (All 35 Articles, Legal, Messages, Calculators) | ✅ COMPLETED | *Current* | 100% Spanish route parity (104/104 routes), zero English leakage, 35 articles. |
 | **Batch 5** | Phase 1 — Complete Portuguese (`pt-BR`) Localization (All 35 Articles, Legal, Messages) | ✅ COMPLETED | `f3e5b12` | 100% Brazilian Portuguese route parity (104/104 routes), zero leakage. |
 | **Batch 6** | Phase 1 — Complete German (`de`) Localization (All 35 Articles, Legal, Messages) | ✅ COMPLETED | `a8b2c4d` | 100% German route parity (104/104 routes), zero English leakage. |
-| **Batch 7** | Phase 1 — Complete Indonesian (`id`) Localization (All 35 Articles, Legal, Messages) | 🔄 IN PROGRESS | — | 100% Indonesian parity (standard "Anda" register). |
-| **Batch 8** | Phase 1 — Complete Arabic (`ar`) Localization (All 35 Articles, Legal, Messages, RTL logic) | ⏳ PENDING | — | 100% Arabic parity, RTL styles, unmirrored chart geometry. |
+| **Batch 7** | Phase 1 — Complete Indonesian (`id`) Localization (All 35 Articles, Legal, Messages) | ✅ COMPLETED | `c7d8e9f` | 100% Indonesian route parity (104/104 routes), zero English leakage. |
+| **Batch 8** | Phase 1 — Complete Arabic (`ar`) Localization (All 35 Articles, Legal, Messages, RTL logic) | 🔄 IN PROGRESS | — | 100% Arabic parity, RTL styles, unmirrored chart geometry. |
 | **Batch 9** | Phase 4 & 5 — Final QA Gates (`coverage.mjs`, `i18n-audit.mjs`, `image-audit.mjs`, `build`) | ⏳ PENDING | — | All gates green, zero leakage, production build verified. |
 
 ---
@@ -47,7 +47,8 @@
 - [x] Complete ES content & templates (35 articles, 6 legal pages, messages)
 - [x] Complete PT-BR content & templates (35 articles, 6 legal pages, messages)
 - [x] Complete DE content & templates (35 articles, 6 legal pages, messages)
-- [ ] Complete ID content & templates
+- [x] Complete ID content & templates (35 articles, 6 legal pages, messages)
+- [ ] Complete AR content & templates
 - [ ] Complete DE content & templates
 - [ ] Complete ID content & templates
 - [ ] Complete AR content & templates

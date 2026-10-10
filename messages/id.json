@@ -21,7 +21,8 @@
     "disclaimerText": "Matriks Takdir adalah kerangka simbolis untuk refleksi dan introspeksi diri, bukan ilmu empiris, diagnosis medis, atau ramalan kepastian masa depan. Gunakan dengan kebijaksanaan pribadi.",
     "lastUpdated": "Terakhir diperbarui",
     "minutesRead": "{count} menit membaca",
-    "home": "Beranda"
+    "home": "Beranda",
+    "notFound": "Halaman Tidak Ditemukan (404)"
   },
   "nav": {
     "calculators": "Kalkulator",
@@ -109,5 +110,19 @@
   },
   "legal": {
     "bindingNotice": "Pemberitahuan Resmi: Terjemahan bahasa lokal ini disediakan untuk tujuan informasi semata. Versi asli bahasa Inggris adalah satu-satunya teks yang mengikat secara hukum."
+  },
+  "cookieBanner": {
+    "title": "Privasi dan Preferensi Cookie",
+    "description": "Kami menyediakan analisis Matriks Takdir lengkap 100% gratis. Untuk mendukung layanan ini, kami dan mitra periklanan kami menggunakan cookie untuk menampilkan iklan yang tidak mengganggu.",
+    "privacyPolicy": "Kebijakan Privasi",
+    "accept": "Terima Semua",
+    "decline": "Hanya Cookie Penting"
+  },
+  "email": {
+    "subject": "Bagan Pribadi Matriks Takdir Anda",
+    "greeting": "Halo",
+    "intro": "Berikut tautan langsung ke bagan Matriks Takdir pribadi Anda yang dihitung dengan metode klasik.",
+    "viewButton": "Lihat Bagan Saya",
+    "disclaimer": "Analisis ini disediakan semata-mata untuk tujuan pendidikan dan refleksi diri pribadi."
   }
 }
