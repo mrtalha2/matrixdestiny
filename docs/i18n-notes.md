@@ -84,5 +84,5 @@
 - [x] Phase 2: Arabic (`ar`) localization (RTL, Homepage, 22 Arcana, 26 Karmic Tails, 8 Calculators, Chart, Blog, Legal)
 - [x] Phase 3: SEO, hreflang, localized sitemaps, JSON-LD alternates
 - [x] Phase 4: Automated audit script (`scripts/i18n-audit.mjs`)
-- [ ] Phase 5: Full regression verification (`tsc`, `lint`, `test`, `build`)
-- [ ] Phase 6: Final documentation and reporting
+- [x] Phase 5: Full regression verification (`tsc`, `lint`, `test`, `build`)
+- [x] Phase 6: Final documentation and reporting
