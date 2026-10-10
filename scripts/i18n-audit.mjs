@@ -184,7 +184,7 @@ assert(!sitemapCode.includes("dynamicChartRoutes"), "Personalized chart dates ex
 console.log("\n--- 6. AUDITING LOCALIZED CONTENT CATALOGS & LEGAL NOTICES ---");
 
 // Check Arcana catalogs
-const implementedArcanaLocales = ["es", "pt-BR"].filter(loc => 
+const implementedArcanaLocales = LOCALES.filter(loc => 
   fs.existsSync(path.join(rootDir, "src", "content", "localized", "arcana", `${loc}.ts`))
 );
 for (const loc of implementedArcanaLocales) {
@@ -203,7 +203,7 @@ const signatures = [
   "18-3-12", "6-14-8", "9-18-9", "21-10-16", "15-5-8", "18-9-9", "3-22-19",
   "6-17-11", "3-13-10", "6-20-14", "15-20-5", "9-3-21"
 ];
-const implementedKarmicLocales = ["es", "pt-BR"].filter(loc => 
+const implementedKarmicLocales = LOCALES.filter(loc => 
   fs.existsSync(path.join(rootDir, "src", "content", "localized", "karmic-tails", `${loc}.ts`))
 );
 for (const loc of implementedKarmicLocales) {

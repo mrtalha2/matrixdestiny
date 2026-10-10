@@ -514,6 +514,270 @@ export function LocalizedHomeGuide({ locale }: LocalizedHomeGuideProps) {
     );
   }
 
+  if (locale === "de") {
+    return (
+      <div className="space-y-16 sm:space-y-24 py-12 sm:py-16">
+        {/* =========================================================================
+            1. ABSCHNITT: IST DIE MATRIX DES SCHICKSALS EIN PERSÖNLICHKEITSTEST?
+            ========================================================================= */}
+        <section aria-labelledby="de-distinction-heading" className="site-container">
+          <div className="relative overflow-hidden rounded-2xl border border-border-strong bg-gradient-to-b from-surface to-surface-raised p-6 sm:p-10 shadow-elevation-subtle">
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-xs font-mono font-medium text-brand-primary mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Wesentlicher Unterschied</span>
+              </div>
+
+              <h2
+                id="de-distinction-heading"
+                className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+              >
+                Ist die Matrix des Schicksals ein Persönlichkeitstest?
+              </h2>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-6">
+                <strong>Nein.</strong> Ein herkömmlicher psychologischer Persönlichkeitstest (wie MBTI, Enneagramm oder Big Five) stellt dir Dutzende Fragen darüber, wie du dich im Moment selbst einschätzt. Das Ergebnis hängt vollkommen von deinen subjektiven Tagesantworten ab.
+              </p>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-8">
+                Die <strong>Matrix des Schicksals</strong> hingegen ist ein zeitloses geometrisches Oktagramm, das rein aus deinem <em>exakten Geburtsdatum</em> berechnet wird. Es bedarf keines Ausfüllens von Fragebögen. Sie modelliert deine seelischen Energiestrukturen anhand der 22 Großen Arkana und offenbart sowohl lichtvolle Potenziale als auch unbewusste Schattenmuster.
+              </p>
+
+              {/* Visueller Vergleich */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl border border-border bg-surface-subtle/50 space-y-3">
+                  <div className="flex items-center gap-2 text-ink-primary font-medium text-sm">
+                    <span className="p-1 rounded bg-amber-500/10 text-amber-500">
+                      <HelpCircle className="w-4 h-4" />
+                    </span>
+                    <span>Klassische Persönlichkeitstests</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-muted space-y-2">
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Subjektive Selbstbeurteilung (Momentaufnahme)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Kann je nach Tagesform und Laune schwanken</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Beschreibt nur das gegenwärtige Verhaltensmuster</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl border border-brand-primary/30 bg-brand-primary/5 space-y-3">
+                  <div className="flex items-center gap-2 text-ink-primary font-medium text-sm">
+                    <span className="p-1 rounded bg-brand-primary/20 text-brand-primary">
+                      <Sparkles className="w-4 h-4" />
+                    </span>
+                    <span>Matrix des Schicksals</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-secondary space-y-2">
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Konstante archetypische Arithmetik des Geburtsdatums</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Offenbart Potenziale im Licht und Lektionen im Schatten</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Ganzheitliche Orientierung für Partnerschaft, Beruf und Ahnen</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            2. ABSCHNITT: WIE DU DEIN SCHICKSALSMATRIX-CHART LIEST
+            ========================================================================= */}
+        <section aria-labelledby="de-how-to-read-heading" className="site-container">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <h2
+              id="de-how-to-read-heading"
+              className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+            >
+              Wie du deine Matrix des Schicksals liest
+            </h2>
+            <p className="text-sm sm:text-base text-ink-secondary">
+              Dein Chart besteht aus zwei sich überlagernden Quadraten: dem Erdquadrat (materielle Welt) und dem Himmelsquadrat (Geist und Intuition). Folge diesen 4 Schritten für ein klares Verständnis.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Schritt 1: Punkt E */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Punkt E: Seelen-Komfortzone
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Die Mitte des Oktagramms. Dies ist deine energetische Heimat – die Quelle deiner inneren Ruhe, wenn du erschöpft bist.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-brand-primary font-medium">
+                Zentraler Ankerpunkt
+              </div>
+            </Card>
+
+            {/* Schritt 2: Punkt A */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-spirit/10 text-chart-spirit flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Punkt A: Persönlichkeit & Geburtstag
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Der linke Scheitelpunkt. Er bestimmt deine äußere Visitenkarte: wie Menschen dich wahrnehmen und wie du auf die Welt zugehst.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-spirit font-medium">
+                Äußere Wirkung
+              </div>
+            </Card>
+
+            {/* Schritt 3: Liebes- und Geldlinie */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-wealth/10 text-chart-wealth flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Liebes- & Wohlstandskanal
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Die Verbindungslinie zwischen der Mitte und dem rechten Quadranten. Sie zeigt erfüllte Partnerschaften und finanzielle Hebel.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-wealth font-medium">
+                Beziehungen & Finanzen
+              </div>
+            </Card>
+
+            {/* Schritt 4: Karmischer Schwanz */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center font-bold text-lg">
+                  4
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Punkt D: Karmischer Schwanz
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Die untere Triade. Diese drei Arkana beschreiben tiefe ungelöste Lektionen, die bewusst ins Licht transformiert werden wollen.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-rose-500 font-medium">
+                Karmische Lektion
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            3. ABSCHNITT: DIE 22 GROSSEN ARKANA ENTDECKEN
+            ========================================================================= */}
+        <section aria-labelledby="de-arcana-catalog-heading" className="site-container">
+          <div className="rounded-2xl border border-border-strong bg-surface p-6 sm:p-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h2
+                  id="de-arcana-catalog-heading"
+                  className="text-xl sm:text-2xl font-display font-medium text-ink-primary"
+                >
+                  Die 22 Großen Arkana der Schicksalsmatrix
+                </h2>
+                <p className="text-xs sm:text-sm text-ink-secondary mt-1">
+                  Erforsche die archetypischen Bedeutungen, Licht- und Schattenseiten aller 22 Lebensenergien.
+                </p>
+              </div>
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="outline" size="sm" rightIcon={<ArrowRight className="w-4 h-4" />}>
+                  Alle 22 Arkana ansehen
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-2">
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="secondary" size="sm">
+                  1. Der Magier
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/2", locale)}>
+                <Button variant="secondary" size="sm">
+                  2. Die Hohepriesterin
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/3", locale)}>
+                <Button variant="secondary" size="sm">
+                  3. Die Herrscherin
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/7", locale)}>
+                <Button variant="secondary" size="sm">
+                  7. Der Wagen
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/10", locale)}>
+                <Button variant="secondary" size="sm">
+                  10. Das Rad des Schicksals
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/21", locale)}>
+                <Button variant="secondary" size="sm">
+                  21. Die Welt
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/22", locale)}>
+                <Button variant="secondary" size="sm">
+                  22. Der Narr
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            4. ABSCHNITT: AUFRUF ZUM HANDELN
+            ========================================================================= */}
+        <section className="site-container">
+          <div className="rounded-2xl border border-brand-primary/40 bg-gradient-to-r from-brand-primary/10 via-surface to-chart-wealth/10 p-8 sm:p-12 text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-medium text-ink-primary">
+              Berechne jetzt deine Matrix des Schicksals
+            </h2>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-ink-secondary">
+              Gib dein Geburtsdatum in Sekunden ein. Ohne Zwangsanmeldung oder Beschränkungen. Erhalte sofort dein persönliches Chart.
+            </p>
+            <Button
+              onClick={scrollToCalculator}
+              variant="primary"
+              size="lg"
+              className="font-semibold shadow-elevation-mid"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Zum Rechner springen
+            </Button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   // Default fallback
   return null;
 }
