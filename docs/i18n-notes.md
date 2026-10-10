@@ -80,7 +80,7 @@
 - [x] Phase 2: Spanish (`es`) localization (Homepage, 22 Arcana, 26 Karmic Tails, 8 Calculators, Chart, Blog, Legal)
 - [x] Phase 2: Portuguese (Brazil) (`pt-BR`) localization (Homepage, 22 Arcana, 26 Karmic Tails, 8 Calculators, Chart, Blog, Legal)
 - [x] Phase 2: German (`de`) localization (Homepage, 22 Arcana, 26 Karmic Tails, 8 Calculators, Chart, Blog, Legal)
-- [ ] Phase 2: Indonesian (`id`) localization
+- [x] Phase 2: Indonesian (`id`) localization (Homepage, 22 Arcana, 26 Karmic Tails, 8 Calculators, Chart, Blog, Legal)
 - [ ] Phase 2: Arabic (`ar`) localization (RTL)
 - [x] Phase 3: SEO, hreflang, localized sitemaps, JSON-LD alternates
 - [x] Phase 4: Automated audit script (`scripts/i18n-audit.mjs`)

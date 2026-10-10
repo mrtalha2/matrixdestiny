@@ -778,6 +778,270 @@ export function LocalizedHomeGuide({ locale }: LocalizedHomeGuideProps) {
     );
   }
 
+  if (locale === "id") {
+    return (
+      <div className="space-y-16 sm:space-y-24 py-12 sm:py-16">
+        {/* =========================================================================
+            1. BAGIAN: APAKAH MATRIKS TAKDIR TES KEPRIBADIAN?
+            ========================================================================= */}
+        <section aria-labelledby="id-distinction-heading" className="site-container">
+          <div className="relative overflow-hidden rounded-2xl border border-border-strong bg-gradient-to-b from-surface to-surface-raised p-6 sm:p-10 shadow-elevation-subtle">
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-xs font-mono font-medium text-brand-primary mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Perbedaan Mendasar</span>
+              </div>
+
+              <h2
+                id="id-distinction-heading"
+                className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+              >
+                Apakah Matriks Takdir merupakan tes kepribadian?
+              </h2>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-6">
+                <strong>Bukan.</strong> Tes kepribadian konvensional (seperti MBTI, Enneagram, atau Big Five) mengajukan puluhan pertanyaan mengenai bagaimana Anda memandang diri Anda dalam situasi tertentu. Hasilnya bergantung sepenuhnya pada jawaban subjektif Anda pada hari itu.
+              </p>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-8">
+                Sebaliknya, <strong>Matriks Takdir</strong> adalah peta geometris dan arketipikal yang dihitung murni dari <em>tanggal lahir lengkap Anda</em>. Anda tidak perlu menjawab kuesioner apa pun. Metode ini memetakan struktur energi jiwa Anda melalui 22 Arkana Mayor, mengungkap potensi cahaya maupun bayangan bawah sadar Anda secara objektif.
+              </p>
+
+              {/* Tabel Perbandingan Visual */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl border border-border bg-surface-subtle/50 space-y-3">
+                  <div className="flex items-center gap-2 text-ink-primary font-medium text-sm">
+                    <span className="p-1 rounded bg-amber-500/10 text-amber-500">
+                      <HelpCircle className="w-4 h-4" />
+                    </span>
+                    <span>Tes Kepribadian Konvensional</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-muted space-y-2">
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Penilaian mandiri subjektif (keadaan sesaat)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Hasil dapat berubah bergantung suasana hati</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <span>Hanya menggambarkan perilaku permukaan saat ini</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl border border-brand-primary/30 bg-brand-primary/5 space-y-3">
+                  <div className="flex items-center gap-2 text-ink-primary font-medium text-sm">
+                    <span className="p-1 rounded bg-brand-primary/20 text-brand-primary">
+                      <Sparkles className="w-4 h-4" />
+                    </span>
+                    <span>Matriks Takdir</span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-secondary space-y-2">
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Arithmatika arketipe tanggal lahir yang konstan</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Mengungkap potensi seimbang dan perangkap bayangan</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>Panduan komprehensif untuk asmara, karier, dan karma</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            2. BAGIAN: CARA MEMBACA BAGAN MATRIKS TAKDIR ANDA
+            ========================================================================= */}
+        <section aria-labelledby="id-how-to-read-heading" className="site-container">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <h2
+              id="id-how-to-read-heading"
+              className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+            >
+              Cara Membaca Bagan Matriks Takdir Anda
+            </h2>
+            <p className="text-sm sm:text-base text-ink-secondary">
+              Bagan Anda terdiri dari dua persegi yang saling berpotongan: Persegi Bumi (dunia materi) dan Persegi Langit (alam spiritual). Ikuti 4 langkah ini untuk memahaminya secara runtut.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Langkah 1: Titik E */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Titik E: Zona Nyaman Jiwa
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Pusat oktagram. Ini adalah inti rumah energi batin Anda – tempat jiwa memulihkan ketenangan saat lelah.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-brand-primary font-medium">
+                Pusat Energi Utama
+              </div>
+            </Card>
+
+            {/* Langkah 2: Titik A */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-spirit/10 text-chart-spirit flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Titik A: Posisi Kepribadian
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Sudut kiri oktagram (hari lahir). Citra sosial Anda: bagaimana masyarakat memandang Anda dan cara Anda berinteraksi.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-spirit font-medium">
+                Citra Sosial Lahiriah
+              </div>
+            </Card>
+
+            {/* Langkah 3: Jalur Asmara dan Finansial */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-wealth/10 text-chart-wealth flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Jalur Asmara & Finansial
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Garis diagonal penghubung pusat dengan kuadran kanan bawah. Menunjukkan pintu rezeki dan harmoni hubungan jodoh.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-wealth font-medium">
+                Jodoh & Rezeki
+              </div>
+            </Card>
+
+            {/* Langkah 4: Ekor Karma */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center font-bold text-lg">
+                  4
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  Titik D: Ekor Karma
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  Triad paling bawah. Tiga Arkana yang menggambarkan pelajaran karma belum selesai yang perlu diikhlaskan dan disembuhkan.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-rose-500 font-medium">
+                Pembersihan Karma
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            3. BAGIAN: JELAJAHI 22 ARKANA MAYOR
+            ========================================================================= */}
+        <section aria-labelledby="id-arcana-catalog-heading" className="site-container">
+          <div className="rounded-2xl border border-border-strong bg-surface p-6 sm:p-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h2
+                  id="id-arcana-catalog-heading"
+                  className="text-xl sm:text-2xl font-display font-medium text-ink-primary"
+                >
+                  22 Arkana Mayor Matriks Takdir
+                </h2>
+                <p className="text-xs sm:text-sm text-ink-secondary mt-1">
+                  Pelajari makna arketipe, sisi cahaya seimbang, dan jebakan bayangan dari seluruh 22 energi kehidupan.
+                </p>
+              </div>
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="outline" size="sm" rightIcon={<ArrowRight className="w-4 h-4" />}>
+                  Lihat Semua 22 Arkana
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-2">
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="secondary" size="sm">
+                  1. Sang Penyihir
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/2", locale)}>
+                <Button variant="secondary" size="sm">
+                  2. Sang Pendeta Agung Wanita
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/3", locale)}>
+                <Button variant="secondary" size="sm">
+                  3. Sang Permaisuri
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/7", locale)}>
+                <Button variant="secondary" size="sm">
+                  7. Kereta Perang
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/10", locale)}>
+                <Button variant="secondary" size="sm">
+                  10. Roda Keberuntungan
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/21", locale)}>
+                <Button variant="secondary" size="sm">
+                  21. Dunia
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/22", locale)}>
+                <Button variant="secondary" size="sm">
+                  22. Sang Pengelana
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            4. BAGIAN: AJAKAN BERTINDAK
+            ========================================================================= */}
+        <section className="site-container">
+          <div className="rounded-2xl border border-brand-primary/40 bg-gradient-to-r from-brand-primary/10 via-surface to-chart-wealth/10 p-8 sm:p-12 text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-medium text-ink-primary">
+              Hitung Matriks Takdir Anda Sekarang
+            </h2>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-ink-secondary">
+              Masukkan tanggal lahir Anda dalam hitungan detik. Gratis tanpa registrasi wajib. Dapatkan peta energi lengkap Anda saat ini juga.
+            </p>
+            <Button
+              onClick={scrollToCalculator}
+              variant="primary"
+              size="lg"
+              className="font-semibold shadow-elevation-mid"
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              Menuju Kalkulator
+            </Button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   // Default fallback
   return null;
 }
