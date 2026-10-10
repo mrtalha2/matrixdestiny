@@ -1042,6 +1042,270 @@ export function LocalizedHomeGuide({ locale }: LocalizedHomeGuideProps) {
     );
   }
 
+  if (locale === "ar") {
+    return (
+      <div className="space-y-16 sm:space-y-24 py-12 sm:py-16">
+        {/* =========================================================================
+            1. القسم: هل مصفوفة القدر اختبار شخصية؟
+            ========================================================================= */}
+        <section aria-labelledby="ar-distinction-heading" className="site-container">
+          <div className="relative overflow-hidden rounded-2xl border border-border-strong bg-gradient-to-b from-surface to-surface-raised p-6 sm:p-10 shadow-elevation-subtle text-right">
+            <div className="absolute top-0 left-0 -mt-8 -ml-8 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="max-w-3xl mr-0 ml-auto">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-xs font-mono font-medium text-brand-primary mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>الفارق الجوهري الأصيل</span>
+              </div>
+
+              <h2
+                id="ar-distinction-heading"
+                className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+              >
+                هل مصفوفة القدر مجرد اختبار لتحليل الشخصية؟
+              </h2>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-6">
+                <strong>كلا على الإطلاق.</strong> الاختبارات النفسية الشائعة (مثل MBTI أو الإنياغرام) تطرح عليك عشرات الأسئلة حول تقييمك الذاتي اللحظي لسلوكك. وتعتمد نتيجتها كلياً على حالتك النفسية وإجاباتك الواعية في ذلك اليوم.
+              </p>
+
+              <p className="text-sm sm:text-base text-ink-secondary leading-relaxed mb-8">
+                أما <strong>مصفوفة القدر</strong>، فهي خارطة هندسية ورمزية ثابتة تُحسب حصرياً من <em>تاريخ ميلادك الفعلي الكامل</em> دون الحاجة إلى تعبئة أي استبيانات. تضع نموذجاً لهيكلك الطاقي عبر الأركانا الكبرى الـ 22، كاشفة عن إمكاناتك المتوازنة في النور، وعوائقك النفسية غير الواعية في الظل.
+              </p>
+
+              {/* المقارنة البصرية */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl border border-border bg-surface-subtle/50 space-y-3 text-right">
+                  <div className="flex items-center justify-end gap-2 text-ink-primary font-medium text-sm">
+                    <span>الاختبارات النفسية التقليدية</span>
+                    <span className="p-1 rounded bg-amber-500/10 text-amber-500">
+                      <HelpCircle className="w-4 h-4" />
+                    </span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-muted space-y-2">
+                    <li className="flex items-start justify-end gap-2">
+                      <span>تقييم ذاتي غير موضوعي (انعكاس للحظة الراهنة)</span>
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                    </li>
+                    <li className="flex items-start justify-end gap-2">
+                      <span>تتغير النتائج بتغير المزاج والظروف المؤقتة</span>
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                    </li>
+                    <li className="flex items-start justify-end gap-2">
+                      <span>تصف السلوك السطحي الحالي فقط</span>
+                      <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl border border-brand-primary/30 bg-brand-primary/5 space-y-3 text-right">
+                  <div className="flex items-center justify-end gap-2 text-ink-primary font-medium text-sm">
+                    <span>مصفوفة القدر الهندسية</span>
+                    <span className="p-1 rounded bg-brand-primary/20 text-brand-primary">
+                      <Sparkles className="w-4 h-4" />
+                    </span>
+                  </div>
+                  <ul className="text-xs sm:text-sm text-ink-secondary space-y-2">
+                    <li className="flex items-start justify-end gap-2">
+                      <span>معادلات عددية ثابتة ومحسوبة من تاريخ الميلاد</span>
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    </li>
+                    <li className="flex items-start justify-end gap-2">
+                      <span>تكشف الطاقات في النور ودروس التحرر في الظل</span>
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    </li>
+                    <li className="flex items-start justify-end gap-2">
+                      <span>بوصلة شاملة للحب والمال ومسار الروح والسلالة</span>
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            2. القسم: كيف تقرأ وتفهم مخطط مصفوفة القدر
+            ========================================================================= */}
+        <section aria-labelledby="ar-how-to-read-heading" className="site-container">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <h2
+              id="ar-how-to-read-heading"
+              className="text-2xl sm:text-3xl lg:text-4xl font-display font-normal text-ink-primary tracking-tight mb-4"
+            >
+              كيف تقرأ وتفهم مخطط مصفوفة القدر الخاص بك
+            </h2>
+            <p className="text-sm sm:text-base text-ink-secondary">
+              يتألف مخططك من مربعين هندسيين متداخلين: مربع الأرض (العالم المادي) ومربع السماء (العالم الروحي). اتبع هذه الخطوات الـ 4 لقراءة منظمة وواضحة.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-right">
+            {/* الخطوة 1: النقطة E */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-lg mr-auto ml-0">
+                  1
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  النقطة E: منطقة راحة الروح
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  مركز النجمة الثمانية. هذا هو موطن طاقتك الأصيل ومصدر شحن السكينة الداخلية لروحك عندما تنهكك مشاغل الحياة.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-brand-primary font-medium">
+                المركز الطاقي الرئيسي
+              </div>
+            </Card>
+
+            {/* الخطوة 2: النقطة A */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-spirit/10 text-chart-spirit flex items-center justify-center font-bold text-lg mr-auto ml-0">
+                  2
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  النقطة A: موقع الشخصية
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  الطرف الأيسر للمخطط (يوم الميلاد). يمثل بطاقة تعريفك الاجتماعية: كيف يراك الناس وأسلوبك المباشر في التفاعل مع العالم.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-spirit font-medium">
+                القناع الاجتماعي الظاهر
+              </div>
+            </Card>
+
+            {/* الخطوة 3: خط الحب والمال */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-chart-wealth/10 text-chart-wealth flex items-center justify-center font-bold text-lg mr-auto ml-0">
+                  3
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  قناة العلاقات والوفرة
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  الخط المائل الواصل بين المركز والربع السفلي الأيمن. يوضح مفاتيح التناغم العاطفي مع الشريك وسبل تدفق المال والمهنة.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-chart-wealth font-medium">
+                الحب والمال
+              </div>
+            </Card>
+
+            {/* الخطوة 4: الذيل الكارمي */}
+            <Card className="p-6 flex flex-col justify-between border-border-strong hover:border-brand-primary/40 transition-colors">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center font-bold text-lg mr-auto ml-0">
+                  4
+                </div>
+                <h3 className="text-lg font-display font-medium text-ink-primary">
+                  النقطة D: الذيل الكارمي
+                </h3>
+                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+                  الثالوث السفلي في المخطط. طاقات ثلاث تصف الدروس العميقة والأنماط المعيقة التي حان وقت وعيها وتحويلها إلى نور وقوة.
+                </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border/50 text-xs text-rose-500 font-medium">
+                التحرر الكارمي
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            3. القسم: استكشف الأركانا الكبرى الـ 22
+            ========================================================================= */}
+        <section aria-labelledby="ar-arcana-catalog-heading" className="site-container">
+          <div className="rounded-2xl border border-border-strong bg-surface p-6 sm:p-10 space-y-6 text-right">
+            <div className="flex flex-col sm:flex-row-reverse sm:items-center justify-between gap-4">
+              <div>
+                <h2
+                  id="ar-arcana-catalog-heading"
+                  className="text-xl sm:text-2xl font-display font-medium text-ink-primary"
+                >
+                  الأركانا الكبرى الـ 22 في مصفوفة القدر
+                </h2>
+                <p className="text-xs sm:text-sm text-ink-secondary mt-1">
+                  تعرف على الدلالات الرمزية، وتجليات النور والظل، لجميع الطاقات الحيوية الـ 22.
+                </p>
+              </div>
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="outline" size="sm" rightIcon={<ArrowRight className="w-4 h-4 ml-2 mr-0 rotate-180" />}>
+                  استعراض جميع الأركانا الـ 22
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap justify-end gap-2 pt-2">
+              <Link href={getLocalizedPath("/arcana/1", locale)}>
+                <Button variant="secondary" size="sm">
+                  1. الساحر
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/2", locale)}>
+                <Button variant="secondary" size="sm">
+                  2. الكاهنة الكبرى
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/3", locale)}>
+                <Button variant="secondary" size="sm">
+                  3. الإمبراطورة
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/7", locale)}>
+                <Button variant="secondary" size="sm">
+                  7. العربة
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/10", locale)}>
+                <Button variant="secondary" size="sm">
+                  10. عجلة الحظ
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/21", locale)}>
+                <Button variant="secondary" size="sm">
+                  21. العالم
+                </Button>
+              </Link>
+              <Link href={getLocalizedPath("/arcana/22", locale)}>
+                <Button variant="secondary" size="sm">
+                  22. الرحالة
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            4. القسم: دعوة للحساب
+            ========================================================================= */}
+        <section className="site-container">
+          <div className="rounded-2xl border border-brand-primary/40 bg-gradient-to-r from-brand-primary/10 via-surface to-chart-wealth/10 p-8 sm:p-12 text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-medium text-ink-primary">
+              احسب مصفوفة القدر الخاصة بك الآن
+            </h2>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-ink-secondary">
+              أدخل تاريخ ميلادك في ثوانٍ معدودة. مجاناً بالكامل دون حاجة للتسجيل. احصل على مخطط طاقتك الشامل في الحال.
+            </p>
+            <Button
+              onClick={scrollToCalculator}
+              variant="primary"
+              size="lg"
+              className="font-semibold shadow-elevation-mid"
+              rightIcon={<ArrowRight className="w-4 h-4 ml-2 mr-0 rotate-180" />}
+            >
+              الانتقال إلى الحاسبة
+            </Button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   // Default fallback
   return null;
 }

@@ -133,6 +133,14 @@ export function ChartDashboardClient({
   const handleExportPdf = async () => {
     try {
       setIsExportingPdf(true);
+      // Check if current page is in Arabic locale
+      if (typeof window !== "undefined" && (document.documentElement.lang === "ar" || document.documentElement.dir === "rtl")) {
+        alert(
+          "ملاحظة: يجري حالياً تحسين تشكيل خطوط ملفات PDF المباشرة باللغة العربية. تم فتح نافذة الطباعة المباشرة لتصدير وحفظ التقرير بأعلى دقة وتنسيق متكامل."
+        );
+        window.print();
+        return;
+      }
       const { exportChartAsPdf } = await import("@/lib/utils/export-pdf");
       await exportChartAsPdf({
         matrix,

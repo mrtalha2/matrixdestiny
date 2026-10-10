@@ -4,6 +4,7 @@ import { esKarmicTailsCatalog } from "./es";
 import { ptBrKarmicTailsCatalog } from "./pt-BR";
 import { deKarmicTailsCatalog } from "./de";
 import { idKarmicTailsCatalog } from "./id";
+import { arKarmicTailsCatalog } from "./ar";
 import { Locale } from "@/lib/i18n/config";
 
 const localizedKarmicTailsMap: Partial<Record<Locale, Record<string, KarmicTailDefinition>>> = {
@@ -11,6 +12,7 @@ const localizedKarmicTailsMap: Partial<Record<Locale, Record<string, KarmicTailD
   "pt-BR": ptBrKarmicTailsCatalog,
   de: deKarmicTailsCatalog,
   id: idKarmicTailsCatalog,
+  ar: arKarmicTailsCatalog,
 };
 
 export function getLocalizedKarmicTailsCatalog(locale: Locale): Record<string, KarmicTailDefinition> {
@@ -26,4 +28,4 @@ export function findLocalizedKarmicTail(slug: string, locale: Locale): KarmicTai
   return Object.values(catalog).find((t) => t.id === slug || t.signature === slug);
 }
 
-export { esKarmicTailsCatalog, ptBrKarmicTailsCatalog, deKarmicTailsCatalog, idKarmicTailsCatalog };
+export { esKarmicTailsCatalog, ptBrKarmicTailsCatalog, deKarmicTailsCatalog, idKarmicTailsCatalog, arKarmicTailsCatalog };

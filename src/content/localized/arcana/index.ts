@@ -4,6 +4,7 @@ import { esArcanaMeanings } from "./es";
 import { ptBrArcanaMeanings } from "./pt-BR";
 import { deArcanaMeanings } from "./de";
 import { idArcanaMeanings } from "./id";
+import { arArcanaMeanings } from "./ar";
 import { Locale } from "@/lib/i18n/config";
 
 const localizedArcanaMap: Partial<Record<Locale, Record<number, ArcanaMeaning>>> = {
@@ -11,6 +12,7 @@ const localizedArcanaMap: Partial<Record<Locale, Record<number, ArcanaMeaning>>>
   "pt-BR": ptBrArcanaMeanings,
   de: deArcanaMeanings,
   id: idArcanaMeanings,
+  ar: arArcanaMeanings,
 };
 
 export function getLocalizedArcana(num: number, locale: Locale): ArcanaMeaning {
@@ -29,4 +31,4 @@ export function getAllLocalizedArcana(locale: Locale): Record<number, ArcanaMean
   return arcanaMeanings;
 }
 
-export { esArcanaMeanings, ptBrArcanaMeanings, deArcanaMeanings, idArcanaMeanings };
+export { esArcanaMeanings, ptBrArcanaMeanings, deArcanaMeanings, idArcanaMeanings, arArcanaMeanings };
