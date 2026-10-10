@@ -21,7 +21,8 @@
     "disclaimerText": "A Matriz do Destino é uma estrutura simbólica para introspecção e autoconhecimento, não uma ciência empírica, diagnóstico médico ou adivinhação determinista. Utilize com discernimento pessoal.",
     "lastUpdated": "Última atualização",
     "minutesRead": "{count} min de leitura",
-    "home": "Início"
+    "home": "Início",
+    "notFound": "Página Não Encontrada (404)"
   },
   "nav": {
     "calculators": "Calculadoras",
@@ -109,5 +110,19 @@
   },
   "legal": {
     "bindingNotice": "Aviso Oficial: Esta tradução localizada é fornecida apenas para fins informativos e de conveniência. A versão original em inglês é o único texto juridicamente vinculante."
+  },
+  "cookieBanner": {
+    "title": "Privacidade e Preferências de Cookies",
+    "description": "Disponibilizamos nossos relatórios completos da matriz 100% gratuitos. Para manter esse serviço, nós e nossos parceiros de anúncios utilizamos cookies para exibir publicidade não intrusiva.",
+    "privacyPolicy": "Política de Privacidade",
+    "accept": "Aceitar Todos",
+    "decline": "Recusar Não Essenciais"
+  },
+  "email": {
+    "subject": "Seu Mapa Pessoal da Matriz do Destino",
+    "greeting": "Olá",
+    "intro": "Aqui está o link para o seu mapa pessoal da Matriz do Destino calculado pelo método clássico.",
+    "viewButton": "Abrir meu Mapa",
+    "disclaimer": "Este cálculo é oferecido para fins educacionais e de autorreflexão."
   }
 }
