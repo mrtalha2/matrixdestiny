@@ -60,12 +60,14 @@ export async function generateMetadata({ params }: LocalizedBlogPageProps): Prom
   });
 }
 
+import { getLocalizedArticles } from "@/lib/blog/localized-blog";
+
 export default function LocalizedBlogPage({ params }: LocalizedBlogPageProps) {
   const norm = normalizeLocalePrefix(params.locale);
   if (!norm) notFound();
 
   const msgs = getMessages(norm);
-  const articles = getAllArticles();
+  const articles = getLocalizedArticles(norm);
 
   const jsonLd = {
     "@context": "https://schema.org",

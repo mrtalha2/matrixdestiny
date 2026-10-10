@@ -12,9 +12,9 @@
 | **Batch 0** | Phase 0 — Initial Coverage Audit (`scripts/coverage.mjs` & `docs/coverage-before.md`) | ✅ COMPLETED | `f9e42cb` | Baseline: EN 100%, ES 37.5%, PT-BR 37.5%, DE 34.6%, ID 34.6%, AR 34.6%. |
 | **Batch 1** | Phase 2 — UX Patterns & Analysis (`docs/ux-ideas.md`, Style Guides in `docs/style/`) | ✅ COMPLETED | `d7f32b3` | TMOD analysis & 9 adopted patterns; Style guides for es, pt-BR, de, id, ar. |
 | **Batch 2** | Phase 2 — UX Implementation (Language Picker Modal, Contextual Bar, Guides nav, Footer, Article layout) | ✅ COMPLETED | `1ab10a5` | Interactive modal, sticky birthdate prefill bar, structured footer, readable measure. |
-| **Batch 3** | Phase 3 — Unique Blog Hero Images & Perceptual Hash Auditor (`scripts/image-audit.mjs`) | ✅ COMPLETED | *Current* | 35 unique compositions, dHash Hamming distance >= 11 (min 11), <=120KB, blur map. |
-| **Batch 4** | Phase 1 — Complete Spanish (`es`) Localization (All 35 Articles, Legal, Messages, Calculators) | 🔄 IN PROGRESS | — | 100% Spanish route parity, zero English leakage. |
-| **Batch 5** | Phase 1 — Complete Portuguese (`pt-BR`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% Brazilian Portuguese parity ("você" register). |
+| **Batch 3** | Phase 3 — Unique Blog Hero Images & Perceptual Hash Auditor (`scripts/image-audit.mjs`) | ✅ COMPLETED | `01211ff` | 35 unique compositions, dHash Hamming distance >= 11 (min 11), <=120KB, blur map. |
+| **Batch 4** | Phase 1 — Complete Spanish (`es`) Localization (All 35 Articles, Legal, Messages, Calculators) | ✅ COMPLETED | *Current* | 100% Spanish route parity (104/104 routes), zero English leakage, 35 articles. |
+| **Batch 5** | Phase 1 — Complete Portuguese (`pt-BR`) Localization (All 35 Articles, Legal, Messages) | 🔄 IN PROGRESS | — | 100% Brazilian Portuguese parity ("você" register). |
 | **Batch 6** | Phase 1 — Complete German (`de`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% German parity (friendly "du" register). |
 | **Batch 7** | Phase 1 — Complete Indonesian (`id`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% Indonesian parity (standard "Anda" register). |
 | **Batch 8** | Phase 1 — Complete Arabic (`ar`) Localization (All 35 Articles, Legal, Messages, RTL logic) | ⏳ PENDING | — | 100% Arabic parity, RTL styles, unmirrored chart geometry. |
@@ -39,12 +39,12 @@
 - [x] Generate WebP heroes and blurDataURL map in `src/content/blog/blur-map.json`.
 
 ### Phase 1: Localization
-- [ ] `docs/style/es.md` (Latin American "tú")
-- [ ] `docs/style/pt-BR.md` (Brazilian "você")
-- [ ] `docs/style/de.md` (Friendly "du")
-- [ ] `docs/style/id.md` (Polite "Anda")
-- [ ] `docs/style/ar.md` (Modern Standard Arabic)
-- [ ] Complete ES content & templates
+- [x] `docs/style/es.md` (Latin American "tú")
+- [x] `docs/style/pt-BR.md` (Brazilian "você")
+- [x] `docs/style/de.md` (Friendly "du")
+- [x] `docs/style/id.md` (Polite "Anda")
+- [x] `docs/style/ar.md` (Modern Standard Arabic)
+- [x] Complete ES content & templates (35 articles, 6 legal pages, messages)
 - [ ] Complete PT-BR content & templates
 - [ ] Complete DE content & templates
 - [ ] Complete ID content & templates

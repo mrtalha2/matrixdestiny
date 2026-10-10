@@ -62,15 +62,14 @@ try {
   console.error("Failed to load article slugs:", e);
 }
 
-// 26 Karmic tail slugs
+// 26 Karmic tail IDs from karmicTailsCatalog
 const karmicSlugs = [
-  "love-magic", "warrior-of-faith", "dark-mage", "rebel", "cheated-trust",
-  "spiritual-renunciation", "disappointment-in-love", "loss-of-talents", "destruction",
-  "physical-aggression", "lonely-soul", "fear-of-family", "sacrificial-martyr",
-  "material-greed", "proud-fall", "hidden-talents", "suppressed-emotions",
-  "broken-vows", "wasted-potential", "tyrant", "spiritual-exile",
-  "family-feud", "forbidden-knowledge", "slave-of-passions", "illusion-weaver",
-  "eternal-wanderer"
+  "love-magic", "warrior-of-faith", "dark-mage", "physical-aggression", "world-of-passions",
+  "emperor", "pride", "disappointment-of-lineage", "wizard-hermit", "oppressed-soul",
+  "lonely-woman", "destruction-death-souls", "warrior", "prisoner", "physical-suffering",
+  "dictator", "magical-sacrifice", "spiritual-priest", "betrayal-family-passions",
+  "hidden-wisdom-wizard", "unborn-child", "lost-talent", "suicide-hopelessness",
+  "soul-sacrificed", "rebel", "overseer"
 ];
 
 // Legal pages
@@ -172,7 +171,8 @@ for (const loc of LOCALES) {
   record("Hub", "/tools", loc, "translated");
 
   // 3. Blog Hub
-  record("Hub", "/blog", loc, loc === "en" ? "translated" : "English text leaking", "Blog index localized headers");
+  const hasBlogHub = loc === "en" || fs.existsSync(path.join(rootDir, "src/content/localized/blog", loc === "pt-BR" ? "pt-BR" : loc, "index.ts"));
+  record("Hub", "/blog", loc, hasBlogHub ? "translated" : "English text leaking", "Blog index localized headers");
 
   // 4. Calculators
   for (const calc of calculators) {

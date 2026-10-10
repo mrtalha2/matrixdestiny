@@ -36,12 +36,14 @@ interface LocalizedBlogPostPageProps {
   };
 }
 
+import { getLocalizedArticleBySlug, getLocalizedArticles } from "@/lib/blog/localized-blog";
+
 export async function generateStaticParams() {
   const locales = ["es", "pt-br", "de", "id", "ar"];
-  const articles = getAllArticles();
   const params: { locale: string; slug: string }[] = [];
 
   for (const locale of locales) {
+    const articles = getLocalizedArticles(locale);
     for (const a of articles) {
       params.push({
         locale,
@@ -59,7 +61,7 @@ export async function generateMetadata({
   const norm = normalizeLocalePrefix(params.locale);
   if (!norm) return {};
 
-  const article = getArticleBySlug(params.slug);
+  const article = getLocalizedArticleBySlug(params.slug, norm);
   if (!article) {
     return { title: "Article Not Found | Matrix of Destiny" };
   }
@@ -77,7 +79,7 @@ export default function LocalizedBlogPostPage({ params }: LocalizedBlogPostPageP
   const norm = normalizeLocalePrefix(params.locale);
   if (!norm) notFound();
 
-  const article = getArticleBySlug(params.slug);
+  const article = getLocalizedArticleBySlug(params.slug, norm);
   if (!article) notFound();
 
   const msgs = getMessages(norm);
