@@ -1,17 +1,17 @@
 # Matrix of Destiny — Full Route × Locale Coverage Audit
 
-> Generated: 2026-10-10T07:36:48.456Z
+> Generated: 2026-10-10T08:13:33.523Z
 
 ## Coverage Summary by Locale
 
 | Locale | Total Routes | Translated | English Text Leaking | Missing | Coverage % |
 |---|---|---|---|---|---|
-| **en** | 109 | 109 | 0 | 0 | **100.0%** |
-| **es** | 109 | 39 | 50 | 20 | **35.8%** |
-| **pt-BR** | 109 | 39 | 50 | 20 | **35.8%** |
-| **de** | 109 | 36 | 50 | 23 | **33.0%** |
-| **id** | 109 | 36 | 50 | 23 | **33.0%** |
-| **ar** | 109 | 36 | 50 | 23 | **33.0%** |
+| **en** | 104 | 104 | 0 | 0 | **100.0%** |
+| **es** | 104 | 39 | 45 | 20 | **37.5%** |
+| **pt-BR** | 104 | 39 | 45 | 20 | **37.5%** |
+| **de** | 104 | 36 | 45 | 23 | **34.6%** |
+| **id** | 104 | 36 | 45 | 23 | **34.6%** |
+| **ar** | 104 | 36 | 45 | 23 | **34.6%** |
 
 ---
 
@@ -79,45 +79,40 @@
 | Karmic Tail | `/karmic-tails/illusion-weaver` | ✅ OK | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss |
 | Karmic Tail | `/karmic-tails/eternal-wanderer` | ✅ OK | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss | ⚠️ Miss |
 | Blog Article | `/blog/what-does-arcana-7-mean-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/the-essence` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/personality-position` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/positive-manifestation` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/shadow-traps` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/career-and-wealth` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/love-and-relationships` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/harmonization-protocol` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Blog Article | `/blog/how-destiny-matrix-is-calculated` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/sacred-geometry` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/reduction-rule` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/cardinal-vertices` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/soul-center` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/karmic-tail-triad` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/diagonal-channels` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/manual-vs-automated` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Blog Article | `/blog/karmic-tail-destiny-matrix-meaning` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/what-is-karmic-tail` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/negative-polarity` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/triad-anatomy` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/famous-archetypes` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/symptoms-of-inertia` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/transmutation-protocol` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/golden-gift` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Blog Article | `/blog/destiny-matrix-compatibility-chart-guide` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/what-is-composite-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/calculation-algorithm` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/couple-comfort-zone` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/love-gate-alignment` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/joint-wealth-flow` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/union-karmic-tail` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/harmonization-strategies` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Blog Article | `/blog/money-channel-destiny-matrix-guide` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/anatomy-of-wealth-channel` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/money-entrance-gate` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/resource-vs-shadow` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/love-wealth-intersection` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/career-pathways-by-energy` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/karmic-financial-blocks` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
-| Blog Article | `/blog/wealth-harmonization-protocols` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/matrix-of-destiny-vs-destiny-matrix-vs-matrix-of-fate` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/why-destiny-matrix-calculators-give-different-numbers` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/how-to-calculate-destiny-matrix-by-hand` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/how-to-read-destiny-matrix-chart-step-by-step` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-center-number-comfort-zone` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/is-the-destiny-matrix-accurate` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/is-destiny-matrix-based-on-astrology` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/where-did-matrix-of-destiny-come-from` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-vs-human-design` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-vs-life-path-number` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/mirrored-destiny-matrix-meaning` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/same-arcana-repeated-in-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-lines-explained` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/talent-zone-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-yearly-forecast-explained` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/age-periods-life-cycles-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/chakra-table-destiny-matrix-guide` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/ancestral-lines-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/blind-spots-in-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/common-mistakes-reading-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-love-line-how-to-read` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-compatibility-centers-and-patterns` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/child-destiny-matrix-how-to-read` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/parent-child-balance-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/money-blocks-in-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/money-and-love-balance-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/life-purpose-destiny-matrix-stages` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/inner-self-vs-outer-self-destiny-matrix` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-for-career-choices` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
+| Blog Article | `/blog/destiny-matrix-journaling-prompts` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Legal | `/about` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Legal | `/contact` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
 | Legal | `/editorial-policy` | ✅ OK | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak | ❌ Leak |
