@@ -2,11 +2,13 @@ import { BlogPost } from "@/content/blog/types";
 import { getAllArticles as getAllEnArticles, getArticleBySlug as getEnArticleBySlug } from "@/content/blog/articles";
 import { esBlogArticles } from "@/content/localized/blog/es";
 import { ptBrBlogArticles } from "@/content/localized/blog/pt-BR";
+import { deBlogArticles } from "@/content/localized/blog/de";
 import { Locale, normalizeLocalePrefix } from "@/lib/i18n/config";
 
 const localizedBlogRegistry: Partial<Record<string, BlogPost[]>> = {
   es: esBlogArticles,
   "pt-BR": ptBrBlogArticles,
+  de: deBlogArticles,
   // Other locales will be registered as their batches complete
 };
 

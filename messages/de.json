@@ -21,7 +21,8 @@
     "disclaimerText": "Die Matrix des Schicksals ist ein symbolisches Modell zur Selbstreflexion und Selbsterkenntnis, keine empirische Wissenschaft, medizinische Diagnose oder fatalistische Zukunftsvorhersage. Bitte mit persönlicher Urteilskraft nutzen.",
     "lastUpdated": "Zuletzt aktualisiert",
     "minutesRead": "{count} Min. Lesezeit",
-    "home": "Startseite"
+    "home": "Startseite",
+    "notFound": "Seite nicht gefunden (404)"
   },
   "nav": {
     "calculators": "Rechner",
@@ -109,5 +110,19 @@
   },
   "legal": {
     "bindingNotice": "Offizieller Hinweis: Diese lokalisierte Übersetzung dient ausschließlich zu Informationszwecken. Die englischsprachige Originalfassung ist der einzig rechtlich verbindliche Text."
+  },
+  "cookieBanner": {
+    "title": "Datenschutz und Cookie-Einstellungen",
+    "description": "Wir stellen unsere vollständigen Schicksalsmatrix-Auswertungen zu 100 % kostenlos bereit. Zur Finanzierung dieser Plattform nutzen wir und unsere Werbepartner Cookies zur Einblendung nicht-aufdringlicher Anzeigen.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "accept": "Alle akzeptieren",
+    "decline": "Nur essenzielle Cookies"
+  },
+  "email": {
+    "subject": "Dein persönliches Chart der Matrix des Schicksals",
+    "greeting": "Hallo",
+    "intro": "Hier ist der direkte Link zu deinem persönlichen Schicksalsmatrix-Chart, berechnet nach der klassischen Methode.",
+    "viewButton": "Mein Chart ansehen",
+    "disclaimer": "Diese Auswertung dient ausschließlich der persönlichen Reflexion und Bildung."
   }
 }

@@ -48,7 +48,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "18-6-15": {
     ...karmicTailsCatalog["18-6-15"],
-    id: "dark-passion",
+    id: "dark-mage",
     name: "Gairah Gelap dan Keterikatan Toksik",
     signature: "18-6-15",
     triad: [18, 6, 15],
@@ -70,7 +70,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "15-8-11": {
     ...karmicTailsCatalog["15-8-11"],
-    id: "betrayal-power",
+    id: "physical-aggression",
     name: "Penyalahgunaan Kuasa dan Pengkhianatan Janji",
     signature: "15-8-11",
     triad: [15, 8, 11],
@@ -92,7 +92,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "9-15-6": {
     ...karmicTailsCatalog["9-15-6"],
-    id: "painful-love",
+    id: "world-of-passions",
     name: "Cinta Menyakitkan dan Hati Tertutup",
     signature: "9-15-6",
     triad: [9, 15, 6],
@@ -114,7 +114,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "12-16-4": {
     ...karmicTailsCatalog["12-16-4"],
-    id: "destructive-ruler",
+    id: "emperor",
     name: "Penguasa Kejam dan Mentalitas Korban",
     signature: "12-16-4",
     triad: [12, 16, 4],
@@ -136,7 +136,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "6-5-17": {
     ...karmicTailsCatalog["6-5-17"],
-    id: "proud-artist",
+    id: "pride",
     name: "Seniman Sombong dan Panggilan Terbuang",
     signature: "6-5-17",
     triad: [6, 5, 17],
@@ -158,7 +158,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "6-8-20": {
     ...karmicTailsCatalog["6-8-20"],
-    id: "family-quarrel",
+    id: "disappointment-of-lineage",
     name: "Perselisihan Waris dan Konflik Silsilah",
     signature: "6-8-20",
     triad: [6, 8, 20],
@@ -180,7 +180,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "9-9-18": {
     ...karmicTailsCatalog["9-9-18"],
-    id: "lonely-hermit",
+    id: "wizard-hermit",
     name: "Pertapa Terasing dan Ilmu Tersembunyi",
     signature: "9-9-18",
     triad: [9, 9, 18],
@@ -202,7 +202,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "21-4-10": {
     ...karmicTailsCatalog["21-4-10"],
-    id: "oppressed-free-spirit",
+    id: "oppressed-soul",
     name: "Jiwa Merdeka Tertindas dan Kerja Paksa",
     signature: "21-4-10",
     triad: [21, 4, 10],
@@ -224,7 +224,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "9-12-3": {
     ...karmicTailsCatalog["9-12-3"],
-    id: "unrequited-sacrifice",
+    id: "lonely-woman",
     name: "Pengorbanan Tak Berbalas dan Ibu Terlantar",
     signature: "9-12-3",
     triad: [9, 12, 3],
@@ -246,7 +246,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "21-7-13": {
     ...karmicTailsCatalog["21-7-13"],
-    id: "peace-destroyer",
+    id: "destruction-death-souls",
     name: "Perusak Perdamaian dan Agresi Perang",
     signature: "21-7-13",
     triad: [21, 7, 13],
@@ -268,7 +268,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "12-19-7": {
     ...karmicTailsCatalog["12-19-7"],
-    id: "false-hero",
+    id: "warrior",
     name: "Pahlawan Palsu dan Kelelahan Ekstrem",
     signature: "12-19-7",
     triad: [12, 19, 7],
@@ -290,7 +290,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "3-7-22": {
     ...karmicTailsCatalog["3-7-22"],
-    id: "imprisoned-rebel",
+    id: "prisoner",
     name: "Pemberontak Terpenjara dan Kebebasan Semu",
     signature: "3-7-22",
     triad: [3, 7, 22],
@@ -312,7 +312,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "18-3-12": {
     ...karmicTailsCatalog["18-3-12"],
-    id: "maternal-trauma",
+    id: "physical-suffering",
     name: "Trauma Garis Ibu dan Penolakan Kodrat Kasih",
     signature: "18-3-12",
     triad: [18, 3, 12],
@@ -334,7 +334,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "6-14-8": {
     ...karmicTailsCatalog["6-14-8"],
-    id: "broken-trust",
+    id: "dictator",
     name: "Keretakan Kepercayaan dan Khianat Batin",
     signature: "6-14-8",
     triad: [6, 14, 8],
@@ -356,7 +356,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "9-18-9": {
     ...karmicTailsCatalog["9-18-9"],
-    id: "magical-silence",
+    id: "magical-sacrifice",
     name: "Sumpah Bungkam dan Rahasia Magis",
     signature: "9-18-9",
     triad: [9, 18, 9],
@@ -378,7 +378,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "21-10-16": {
     ...karmicTailsCatalog["21-10-16"],
-    id: "ruined-empire",
+    id: "spiritual-priest",
     name: "Runtuhnya Dinasti dan Kesombongan Rohani",
     signature: "21-10-16",
     triad: [21, 10, 16],
@@ -400,7 +400,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "15-5-8": {
     ...karmicTailsCatalog["15-5-8"],
-    id: "family-disgrace",
+    id: "betrayal-family-passions",
     name: "Aib Silsilah dan Dusta Moral",
     signature: "15-5-8",
     triad: [15, 5, 8],
@@ -422,7 +422,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "18-9-9": {
     ...karmicTailsCatalog["18-9-9"],
-    id: "hidden-seeker",
+    id: "hidden-wisdom-wizard",
     name: "Pencari Terlunta dan Bakat Terpendam",
     signature: "18-9-9",
     triad: [18, 9, 9],
@@ -444,7 +444,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "3-22-19": {
     ...karmicTailsCatalog["3-22-19"],
-    id: "lost-childhood",
+    id: "unborn-child",
     name: "Masa Kecil Terampas dan Beban Dini",
     signature: "3-22-19",
     triad: [3, 22, 19],
@@ -466,7 +466,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "6-17-11": {
     ...karmicTailsCatalog["6-17-11"],
-    id: "unrecognized-genius",
+    id: "lost-talent",
     name: "Bakat Tak Diakui dan Cahaya Tertekan",
     signature: "6-17-11",
     triad: [6, 17, 11],
@@ -488,7 +488,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "3-13-10": {
     ...karmicTailsCatalog["3-13-10"],
-    id: "sudden-loss",
+    id: "suicide-hopelessness",
     name: "Kehilangan Mendadak dan Ketakutan Miskin",
     signature: "3-13-10",
     triad: [3, 13, 10],
@@ -510,7 +510,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "6-20-14": {
     ...karmicTailsCatalog["6-20-14"],
-    id: "ancestral-reconciliation",
+    id: "soul-sacrificed",
     name: "Rekonsiliasi Silsilah dan Kerabat Terbuang",
     signature: "6-20-14",
     triad: [6, 20, 14],
@@ -532,7 +532,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "15-20-5": {
     ...karmicTailsCatalog["15-20-5"],
-    id: "false-prophet",
+    id: "rebel",
     name: "Guru Palsu dan Manipulasi Ajaran Suci",
     signature: "15-20-5",
     triad: [15, 20, 5],
@@ -554,7 +554,7 @@ export const idKarmicTailsCatalog: Record<string, KarmicTailDefinition> = {
 
   "9-3-21": {
     ...karmicTailsCatalog["9-3-21"],
-    id: "isolated-sage",
+    id: "overseer",
     name: "Cendekiawan Asing dan Keterasingan Duniawi",
     signature: "9-3-21",
     triad: [9, 3, 21],
