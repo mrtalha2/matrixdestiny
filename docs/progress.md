@@ -1,0 +1,56 @@
+# Matrix of Destiny — Localization & UX Implementation Progress
+
+> **Last Updated:** October 10, 2026  
+> **Master Tracking Sheet:** Autonomous execution across all phases.
+
+---
+
+## Roadmap & Batch Status
+
+| Batch # | Phase & Description | Status | Commit Hash | Summary / Notes |
+|---|---|---|---|---|
+| **Batch 0** | Phase 0 — Initial Coverage Audit (`scripts/coverage.mjs` & `docs/coverage-before.md`) | ✅ COMPLETED | *Current* | Baseline: EN 100%, ES 35.8%, PT-BR 35.8%, DE 33.0%, ID 33.0%, AR 33.0%. |
+| **Batch 1** | Phase 2 — UX Patterns & Analysis (`docs/ux-ideas.md`, Style Guides in `docs/style/`) | 🔄 IN PROGRESS | — | TMOD analysis & 8–10 adopted patterns; Style guides for es, pt-BR, de, id, ar. |
+| **Batch 2** | Phase 2 — UX Implementation (Language Picker Modal, Contextual Bar, Guides nav, Footer, Article layout) | ⏳ PENDING | — | Interactive modal, sticky birthdate prefill bar, structured footer, readable measure. |
+| **Batch 3** | Phase 3 — Unique Blog Hero Images & Perceptual Hash Auditor (`scripts/image-audit.mjs`) | ⏳ PENDING | — | dHash Hamming distance >= 10, unique compositions, localized alt texts. |
+| **Batch 4** | Phase 1 — Complete Spanish (`es`) Localization (All 35 Articles, Legal, Messages, Calculators) | ⏳ PENDING | — | 100% Spanish route parity, zero English leakage. |
+| **Batch 5** | Phase 1 — Complete Portuguese (`pt-BR`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% Brazilian Portuguese parity ("você" register). |
+| **Batch 6** | Phase 1 — Complete German (`de`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% German parity (friendly "du" register). |
+| **Batch 7** | Phase 1 — Complete Indonesian (`id`) Localization (All 35 Articles, Legal, Messages) | ⏳ PENDING | — | 100% Indonesian parity (standard "Anda" register). |
+| **Batch 8** | Phase 1 — Complete Arabic (`ar`) Localization (All 35 Articles, Legal, Messages, RTL logic) | ⏳ PENDING | — | 100% Arabic parity, RTL styles, unmirrored chart geometry. |
+| **Batch 9** | Phase 4 & 5 — Final QA Gates (`coverage.mjs`, `i18n-audit.mjs`, `image-audit.mjs`, `build`) | ⏳ PENDING | — | All gates green, zero leakage, production build verified. |
+
+---
+
+## Detailed Checklist per Batch
+
+### Phase 2: UI/UX
+- [ ] Create `docs/ux-ideas.md` with 8–10 TMOD comparative patterns.
+- [ ] Build accessible `LanguagePickerModal` with native name, flag, English name, and active indicator.
+- [ ] Build contextual `ContextualBirthdateBar` for arcana/blog/position pages.
+- [ ] Upgrade Header navigation with "Guides" dropdown and language modal trigger.
+- [ ] Upgrade Footer with 5 structured categories: Tools, Guides, Arcana, Karmic Tails, Legal.
+- [ ] Article typography: 60–75ch readable measure, sticky TOC on desktop, key takeaways callout.
+
+### Phase 3: Unique Hero Images & Audit
+- [ ] Create `scripts/image-audit.mjs` verifying file existence, <=120KB, 1600x900, dHash >= 10.
+- [ ] Multilingual alt text dictionary for all 35 articles across EN, ES, PT-BR, DE, ID, AR.
+
+### Phase 1: Localization
+- [ ] `docs/style/es.md` (Latin American "tú")
+- [ ] `docs/style/pt-BR.md` (Brazilian "você")
+- [ ] `docs/style/de.md` (Friendly "du")
+- [ ] `docs/style/id.md` (Polite "Anda")
+- [ ] `docs/style/ar.md` (Modern Standard Arabic)
+- [ ] Complete ES content & templates
+- [ ] Complete PT-BR content & templates
+- [ ] Complete DE content & templates
+- [ ] Complete ID content & templates
+- [ ] Complete AR content & templates
+
+### Phase 5: Quality Assurance
+- [ ] `node scripts/coverage.mjs` = 100% across all 6 locales
+- [ ] `node scripts/i18n-audit.mjs` = All checks pass
+- [ ] `node scripts/image-audit.mjs` = All checks pass
+- [ ] `npm test` = 100% pass
+- [ ] `npm run build` = Successful compilation & static export
